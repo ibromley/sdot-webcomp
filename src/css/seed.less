@@ -1,0 +1,143 @@
+@transit-blue: #5dc7d4;
+@transit-yellow: #fcaf17;
+@transit-orange: #e76525;
+@transit-purple: #42469c;
+@transit-green: #00a048;
+
+@import "map";
+@import "bars";
+@import "animation";
+@import "values";
+@import "flexbox";
+
+body {
+  font-size: 17px;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+.constrained {
+  max-width: 800px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+header.intro {
+  background: white;
+  padding: 20px 0;
+
+  .splash {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  .credits, .date {
+    font-family: @df-sans;
+    color: @df-dark-gray;
+    font-size: 15px;
+  }
+
+  .jump {
+    font-family: @df-sans;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .side-by-side {
+    .display-flex;
+
+    .calculator {
+      margin-left: 20px;
+      .flex(0 0 300px);
+    }
+
+    @media @mobile {
+      display: block;
+    }
+  }
+}
+
+.text-block {
+  clear: both;
+  background: white;
+  padding: 20px 0;
+
+  &.project-head {
+    box-shadow: 0 16px 16px fade(black, 10%);
+  }
+
+  &.other-features {
+    box-shadow: 0 -16px 16px fade(black, 10%);
+  }
+
+  h3 {
+    border-top: 3px solid @transit-green;
+    padding-top: 8px;
+
+    &.orange {
+      border-color: @transit-orange;
+    }
+
+    &.purple {
+      border-color: @transit-purple;
+    }
+
+    &.blue {
+      border-color: @transit-blue;
+    }
+  }
+}
+
+.source {
+  font-family: @df-sans;
+  font-size: 14px;
+}
+
+.other-features {
+  b {
+    display: block;
+  }
+
+  ul {
+    font-family: @df-sans;
+  }
+}
+
+.pros-cons {
+  h4 {
+    margin-top: 0;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: @df-sans;
+  }
+
+  .versus {
+    display: flex;
+
+    .pro {
+      border-right: 1px solid @df-light-gray;
+      padding-right: 16px;
+
+      @media @mobile {
+        border-right: none;
+        padding-right: 0;
+      }
+    }
+
+    @media @mobile {
+      display: block;
+    }
+  }
+}

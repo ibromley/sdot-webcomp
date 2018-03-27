@@ -1,0 +1,81 @@
+@keyframes left-to-right {
+  from {
+    transform: translateX(-100%) translateZ(0);
+  }
+
+  to {
+    transform: translateX(800%) translateZ(0);
+  }
+}
+
+@keyframes right-to-left {
+  from {
+    transform: translateX(100%) translateZ(0);
+  }
+
+  to {
+    transform: translateX(-500%) translateZ(0);
+  }
+}
+
+.splash.animation {
+  position: relative;
+  overflow: hidden;
+
+  .background {
+    width: 100%;
+  }
+
+  .sprite {
+    position: absolute;
+
+    &.train {
+      will-change: transform;
+      transform: translateX(-100%) translateZ(0);
+      top: 15%;
+      animation: left-to-right linear 8s infinite;
+      animation-delay: 1s;
+      position: absolute;
+      height: 70%;
+      // width: 100%;
+
+      .car {
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+
+      .car-b {
+        position: absolute;
+        z-index: -1;
+        transform: translateX(-98%);
+      }
+
+      .car-c {
+        position: absolute;
+        z-index: -2;
+        transform: translateX(-196%);
+      }
+    }
+
+    &.bus {
+      transform: translateX(100%);
+      top: 20%;
+      right: 0;
+      animation: right-to-left linear 7s infinite;
+      animation-delay: 0s;
+      position: absolute;
+      width: 46%;
+    }
+  }
+}
+
+.animation-credit {
+  text-align: right;
+  padding-right: 16px;
+  color: @df-middle-gray;
+  font-style: italic;
+  text-transform: uppercase;
+  font-family: @df-sans;
+  font-size: 13px;
+}
