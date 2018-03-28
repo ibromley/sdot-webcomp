@@ -1,5 +1,7 @@
 # ST3 Voter Guide
 
+[![Build Status](https://travis-ci.org/ibromley/sdot-webcomp.svg?branch=master)](https://travis-ci.org/ibromley/sdot-webcomp)
+
 ## Build Setup
 
 This project utilizes the Grunt build tool. I've quickly added it as a script/dependency to streamline the npm run workflow.

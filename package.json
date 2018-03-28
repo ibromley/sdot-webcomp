@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "grunt"
+    "build": "grunt",
+    "test": "grunt"
   },
   "repository": {
     "type": "git",
