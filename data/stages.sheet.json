@@ -1,26 +1,26 @@
 [
   {
     "layer": "_405_BRT",
-    "head": "I-405/Hwy. 518 bus rapid transit",
-    "text": "A 38-mile corridor from Lynnwood to Burien using I-405 toll lanes. The Kingsgate stop would get a 600-stall park-and-ride garage; south Renton, a 700-stall garage. On the south end, passengers could transfer to light rail at Tukwila International Boulevard Station for airport access.",
+    "head": "Bicycle and Pedestrian System",
+    "text": "The Bicycle and Pedestrian System asset class serves pedestrians and bicyclists and encourages walking and bicycling for transportation and recreation. It includes the following assets: Bicycle Racks, Kiosks, Marked Crosswalks, Sidewalks, Stairways, Street furnishings, and trails.",
     "date": 2024
   },
   {
     "layer": "_522_BRT",
-    "head": "Hwy. 522 bus rapid transit",
-    "text": "Route from UW-Bothell through Lake Forest Park ends at Northeast 145th Street, where commuters would transfer to light rail. Bothell and Kenmore are eager to add apartments, townhomes, dining and sidewalks next to the stops.",
+    "head": "Channelization",
+    "text": "The Channelization asset class consists of pavement markings, other than crosswalks, and delineator posts that define usage of the city streets and direct the flow of traffic. Painted lane line channelization is not long-lived and we generally do not consider it in the same category of infrastructure such as bridges, pavement or signals which last decades. Channelization markings generally require annual maintenance.",
     "date": 2024
   },
   {
     "layer": "Ballard",
-    "head": "Ballard-South Lake Union light rail",
-    "text": "Ballard trains would reach an expanded Westlake Station in 11 minutes, serving 52,000 daily boardings. This $2.5 billion segment would connect to a new $1.7 billion downtown tunnel from Westlake to the International District/Chinatown Station. A community-requested tunnel under Salmon Bay might add $450 million to the cost, compared to the Ballard drawbridge in ST3’s budget.",
+    "head": "Intelligent Transportation System",
+    "text": "Intelligent Transportation System, or ITS, is a new asset class for the 2015 Status & Condition Report. It combines Intelligent Transportation Signs and Traffic Signal Assemblies in order to recognize the system as a network of interdependent data-driven assets. The ITS class includes all of the assets that are either electrically- or solar powered and comprise the system that regulates, controls, communicates and manages the flow of traffic.",
     "date": 2035
   },
   {
     "layer": "West_Seattle",
-    "head": "West Seattle-downtown light rail",
-    "text": "Route would replace RapidRide C bus stops and include a Duwamish River train bridge. Requires tight curves, likely demolition of houses or businesses, and bus-rail transfers at Delridge for 10,000 riders on the 120 bus. As in Ballard, a post-election switch from an elevated track to a tunnel would drive up the price.",
+    "head": "Parking Payment Devices ",
+    "text": "Parking payment devices collect fees for parking on public property or in the Right-of-Way (ROW). The City of Seattle uses on-street payment devices to manage parking in highly utilized areas to create the turnover needed to support a vibrant city. The Parking Operations group in the Transit and Mobility Division manages parking payment devices. ",
     "date": 2030
   },
   {
