@@ -6,33 +6,9 @@
   <body>
 
     <header class="intro">
-
-      <div class="splash animation">
-        <img src="./assets/animation/background.jpg" class="background">
-        <img src="./assets/animation/bus.png" class="bus sprite">
-        <div class="train sprite">
-          <img src="./assets/animation/train_car.png" class="car car-a">
-          <img src="./assets/animation/train_car.png" class="car car-b">
-          <img src="./assets/animation/train_car.png" class="car car-c">
-        </div>
-      </div>
-      <div class="animation-credit">
-        Gabriel Campanario / The Seattle Times
-      </div>
-
       <div class="constrained">
 
-        <h1>ST3: What you'd pay, what you'd get</h1>
-
-        <h2><b>PROPOSITION 1:</b> The $54 billion Sound Transit 3 ballot measure would add 37 stations and 62 miles of light rail by 2041, and extend bus and commuter-train lines. It is among the largest transit proposals in U.S. history.</h2>
-
-        <div class="credits">
-          By Mike Lindblom, Thomas Wilburn and Kelly Shea
-        </div>
-
-        <div class="date">
-          Originally published October 21, 2016
-        </div>
+        <h1>Transit Ecology</h1>
 
         <nav class="jump">
           <a href="#projects">Map of projects</a> |
@@ -41,66 +17,21 @@
           <a href="#pros-cons">Pros and Cons</a>
         </nav>
 
-        <div class="side-by-side">
-          <div class="chatter">
-
-            <p>
-              The measure on the ballot in urban Snohomish, King and Pierce counties calls for these increases (not including tax for other transit agencies):
-
-            <ul>
-              <li> Property tax, $25 a year per $100,000 of assessed value.
-              <li> Sales tax, increase of 50 cents per $100 purchase.
-              <li> Car-tab tax, a yearly increase of $80 per $10,000 vehicle value.
-            </ul>
-
-            <p> A median household would pay $326 next year in new tax (or $169 per adult), plus $303 in existing Sound Transit taxes that voters passed in 1996 and 2008. Actual costs vary by income and lifestyle &mdash; try this ST3 tax calculator to find your own tax increase.
-          </div>
-
-          <div class="calculator" id="calculator">
-            <h2>Property tax</h2>
-            <label>Enter your assessed property value for the 2017 tax year</label>
-            <div class="row">
-              <input data-in="property" value="$0">
-              <div class="spacer">=</div>
-              <div class="property output"></div>
-            </div>
-
-            <h2>Sales tax</h2>
-            <label>Enter your household income</label>
-            <div class="row">
-              <input data-in="sales" value="$0">
-              <div class="spacer">=</div>
-              <div class="sales output"></div>
-            </div>
-
-            <h2>Car tab</h2>
-            <label>Enter the "RTA tax" from your most recent car-tab bill (<a href="https://fortress.wa.gov/dol/tabs/FeeCalcVehicle.aspx">available here</a>)</label>
-            <div class="row">
-              <input data-in="car" value="$0">
-              <div class="spacer">=</div>
-              <div class="car output"></div>
-            </div>
-
-            <div class="final row">
-              <div>Total increase</div>
-              <div class="total output"></div>
-            </div>
-          </div>
-        </div>
-
+        <div class="side-by-side"></div>
+      
       </div>
 
     </header>
 
     <section class="text-block project-head" id="projects">
       <div class="constrained">
-        <h3>The ST3 roadmap</h3>
+        <h3>roadmap</h3>
       </div>
     </section>
 
     <section class="scroll-content">
       <div class="backdrop">
-        <%= t.include("assets/ST3.svg") %>
+        <%= t.include("assets/drawing.svg") %>
       </div>
       <div class="first layer" data-layer="Existing">
         <p>ST3 can be grouped into 12 "projects" throughout the system, ranging from light rail extensions to bus-rapid transit lines. The map shows the complete picture &mdash; scroll to see each project in detail.

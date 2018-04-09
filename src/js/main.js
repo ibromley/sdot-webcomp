@@ -1,8 +1,3 @@
-//require("./lib/social");
-//require("./lib/ads");
-// var track = require("./lib/tracking");
-
-require("./calculator");
 
 var $ = require("./lib/qsa");
 var debounce = require("./lib/debounce");
@@ -41,5 +36,5 @@ var onScroll = function() {
   }
 }
 
-window.addEventListener("scroll", debounce(onScroll, 500));
+window.addEventListener("scroll", debounce(onScroll, 100));
 onScroll();
