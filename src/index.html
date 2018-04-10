@@ -11,10 +11,9 @@
         <h1>Transit Ecology</h1>
 
         <nav class="jump">
-          <a href="#projects">Map of projects</a> |
+          <a href="#projects">Map of Asset Classes</a> |
           <a href="#other-features">Other features</a> |
-          <a href="#funding">Funding</a> |
-          <a href="#pros-cons">Pros and Cons</a>
+          <a href="#funding">Funding</a>
         </nav>
 
         <div class="side-by-side"></div>
@@ -31,28 +30,29 @@
 
     <section class="scroll-content">
       <div class="backdrop">
-        <%= t.include("assets/drawing.svg") %>
+        <%= t.include("assets/sdot.svg") %>
       </div>
       <div class="first layer" data-layer="Existing">
-        <p>ST3 can be grouped into 12 "projects" throughout the system, ranging from light rail extensions to bus-rapid transit lines. The map shows the complete picture &mdash; scroll to see each project in detail.
+        <p>The Seattle Department of Transportation divides their assets and work into distinct classes. These range from common things like roadways, pedestrian walkways, and bridges, to new and exciting things like the Intelligent Transportation System, which helps us keep traffic moving as efficiently as possible throughout the city.</p>
 
         <ul class="key">
-          <li> Solid lines represent existing infrastructure, and dotted lines are proposed for ST3
-          <li> <i class="existing station icon"></i> Existing rail station*
-          <li> <i class="approved station icon"></i> Approved station (ST2)
-          <li> <i class="new station icon"></i> Proposed station (ST3)
-          <li> <i class="bus station icon"></i> New bus station
-          <li> <b class="icon">+</b> Improved station
-          <li> <b class="icon">P</b> Added parking
+          <li> <i class="existing station icon"></i> Bike and Pedestrian System
+          <li> <i class="approved station icon"></i> Channelization
+          <li> <i class="new station icon"></i> Intelligent Transportation System
+          <li> <i class="bus station icon"></i> Parking
+          <li> <b class="icon">+</b> Bridges
+          <li> <b class="icon">P</b> Roadways
         </ul>
 
-        * Not all existing stations are shown.
+        * Not all asset classes are shown.
       </div>
       <% json.stages.forEach(function(stage) { %>
       <div class="layer" data-layer="<%= stage.layer %>">
         <h2><%= stage.head %></h2>
         <p><%= stage.text %></p>
-        <p>Completion: <b><%= stage.date %></b>
+        <% if (typeof(stage.img) !== "undefined") { %>
+          <img src=<%= stage.img %> alt="alt" />
+        <% } %>
       </div>
       <% }) %>
     </section>
