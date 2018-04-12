@@ -21,7 +21,7 @@ var onScroll = function() {
       var layerID = stage.getAttribute("data-layer");
       console.log(layerID);
       if (layerID == current) {
-        console.log('layerID == current');
+        console.log('layerID == current, returning....');
         return;
       }
       var layer = document.querySelector("#" + layerID);
