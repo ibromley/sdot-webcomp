@@ -8,6 +8,7 @@ var keyStage = document.querySelector(".scroll-content");
 var map = document.querySelector(".backdrop svg");
 var camera = new Camera(map);
 var stages = $(".layer").reverse();
+console.log(stages);
 var current = null;
 var existing = document.querySelector("#Existing");
 
@@ -18,9 +19,16 @@ var onScroll = function() {
     var bounds = stage.getBoundingClientRect();
     if (bounds.top < window.innerHeight && bounds.bottom > 0) {
       var layerID = stage.getAttribute("data-layer");
-      if (layerID == current) return;
+      console.log(layerID);
+      if (layerID == current) {
+        console.log('layerID == current');
+        return;
+      }
       var layer = document.querySelector("#" + layerID);
-      if (!layer) return;
+      if (!layer) {
+        console.log("couldn't find a layer with layerID: " + layerID);
+        return;
+      }
       if (layerID != "Existing") {
         savage(map).addClass("zoomed");
       } else {
@@ -30,7 +38,9 @@ var onScroll = function() {
       if (active) savage(active).removeClass("activated");
       savage(layer).addClass("activated");
       current = layerID;
-      camera.zoomTo(layer, window.innerWidth > 1000 ? 200 : 50, 500);
+      console.log(current);
+      camera.zoomTo(layer, window.innerWidth > 1000 ? 100 : 50, 500);
+      console.log(layer.attributes);
       return;
     }
   }
