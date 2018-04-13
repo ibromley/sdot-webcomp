@@ -39,7 +39,7 @@ var onScroll = function() {
       savage(layer).addClass("activated");
       current = layerID;
       console.log(current);
-      camera.zoomTo(layer, window.innerWidth > 1000 ? 100 : 50, 500);
+      camera.zoomTo(layer, window.innerWidth > 1000 ? 100 : 50, 700);
       console.log(layer.attributes);
       return;
     }
