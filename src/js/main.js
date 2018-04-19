@@ -46,17 +46,5 @@ var onScroll = function() {
   }
 }
 
-window.onscroll = function() {myFunction()};
-
-var navbar = document.getElementById("navbar");
-
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
-
 window.addEventListener("scroll", debounce(onScroll, 100));
 onScroll();
