@@ -8,7 +8,7 @@
     <header class="intro">
       <div class="constrained">
 
-        <h1>Transit Ecology</h1>
+        <h1>TransitSphere</h1>
 
         <nav class="jump">
           <a href="#projects">Asset Classes</a> |
@@ -31,25 +31,29 @@
         <%= t.include("assets/sdot2.svg") %>
       </div>
       <div class="first layer" data-layer="Existing">
-        <p>The Seattle Department of Transportation divides their assets and work into distinct classes. These range from common things like roadways, pedestrian walkways, and bridges, to new and exciting things like the Intelligent Transportation System, which helps us keep traffic moving as efficiently as possible throughout the city.</p>
-
+        <p>Asset Class Key</p>
         <ul class="key">
           <li> <i class="existing station icon"></i> Bike and Pedestrian System
+          <li> <i class="existing station icon"></i> Bridges and Structures
           <li> <i class="approved station icon"></i> Channelization
           <li> <i class="new station icon"></i> Intelligent Transportation System
           <li> <i class="bus station icon"></i> Parking
           <li> <b class="icon">+</b> Bridges
-          <li> <b class="icon">P</b> Roadways
+          <li> <b class="icon">+</b> Pavement
+          <li> <b class="icon">P</b> Real Property
+          <li> <b class="icon">+</b> Signs
+          <li> <b class="icon">+</b> Safety Devices
+          <li> <b class="icon">+</b> Transit
+          <li> <b class="icon">+</b> Urban Forest
         </ul>
 
-        * Not all asset classes are shown.
       </div>
       <% json.stages.forEach(function(stage) { %>
       <div class="layer" data-layer="<%= stage.layer %>">
         <h2><%= stage.head %></h2>
         <p><%= stage.text %></p>
         <% if (typeof(stage.img) !== "undefined") { %>
-          <img src=<%= stage.img %> alt="alt" />
+          <img src=<%= stage.img %> alt=<%= stage.head %> />
         <% } %>
       </div>
       <% }) %>
