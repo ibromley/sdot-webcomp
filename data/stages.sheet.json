@@ -13,13 +13,21 @@
   {
     "layer": "Bridge_struct",
     "head": "Bridges &amp; Structures",
-    "text": "The Bridges and Structures asset class consists of the transportation structures that are associated with the street network and a few one-of-a-kind roadway structures (talk about one of them here)",
+    "text": "The Bridges and Structures asset class consists of the transportation structures that are associated with the street network and a few one-of-a-kind roadway structures such as the three draw bridges along the Montalke Cut",
     "anchor": "bridges"
   },
   {
     "layer": "Bridge_struct",
     "head": "Area Street Walls",
     "text": "You might know this as the Seattle Underground! Following the Great Seattle Fire of 1889, streets in the Pioneer Square area were raised during reconstruction, creating the Seattle Underground as we know it today."
+  },
+  {
+    "layer": "Bridge_struct",
+    "head": "Why Maintenance is Important",
+    "text": "Since a bridge can potentially have a very long useful life, effective management requires maintenance and
+    replacement of major components of the bridge on a recurring cycle, rather than replacement of the entire
+    structure"
+
   },
   {
     "layer": "Channelization",
