@@ -50,6 +50,7 @@ var custom_bubble_chart = (function(d3, CustomTooltip) {
             nodes.push(node);
         });
         
+        // Color for bubbles
         fill_color = d3.scale.linear()
             .domain([0, 3, 8, 20, 50, 100, 4106, 4692, 6000])
             .range(['#fff7fb','#ece7f2','#d0d1e6','#a6bddb','#74a9cf','#3690c0','#0570b0','#045a8d','#023858']);
