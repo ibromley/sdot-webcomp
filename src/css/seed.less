@@ -1,12 +1,11 @@
-@transit-blue: #5dc7d4;
-@transit-yellow: #fcaf17;
-@transit-orange: #e76525;
-@transit-purple: #42469c;
-@transit-green: #00a048;
+@transit-blue: #69b3e7;
+@transit-yellow: #fff32a;
+@transit-orange: #db4e00;
+@transit-purple: #492F92;
+@transit-green: #007749;
 
 @import "map";
 @import "bars";
-@import "animation";
 @import "values";
 @import "flexbox";
 
@@ -22,6 +21,61 @@ ul {
   max-width: 800px;
   margin: auto;
   padding: 0 20px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+}
+
+.sticky + .scroll-content {
+  padding-top: 60px;
+}
+
+.anchor {
+  position: relative;
+  top: -120px;
+  visibility: hidden;
+}
+
+#nav {
+  font-family: @df-sans;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 20px 0;
+  margin: auto;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-size: 12px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: @transit-blue;
 }
 
 header.intro {
@@ -82,8 +136,8 @@ header.intro {
     box-shadow: 0 -16px 16px fade(black, 10%);
   }
 
-  h3 {
-    border-top: 3px solid @transit-green;
+  h2 {
+    border-top: 3px solid @transit-blue;
     padding-top: 8px;
 
     &.orange {

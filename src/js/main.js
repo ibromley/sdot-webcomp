@@ -1,8 +1,3 @@
-//require("./lib/social");
-//require("./lib/ads");
-// var track = require("./lib/tracking");
-
-require("./calculator");
 
 var $ = require("./lib/qsa");
 var debounce = require("./lib/debounce");
@@ -35,11 +30,25 @@ var onScroll = function() {
       if (active) savage(active).removeClass("activated");
       savage(layer).addClass("activated");
       current = layerID;
-      camera.zoomTo(layer, window.innerWidth > 1000 ? 200 : 50, 500);
+      camera.zoomTo(layer, window.innerWidth > 1000 ? 100 : 50, 700);
       return;
     }
   }
 }
 
-window.addEventListener("scroll", debounce(onScroll, 500));
+var navbar = document.getElementById("nav");
+var sticky = navbar.offsetTop;
+
+var stickyNav = function() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+} 
+
+window.addEventListener("scroll", stickyNav);
+stickyNav();
+
+window.addEventListener("scroll", debounce(onScroll, 100));
 onScroll();
