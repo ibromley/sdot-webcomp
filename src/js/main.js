@@ -6,6 +6,21 @@ var savage = require("savage-query");
 var d3 = require("d3");
 var $ = require("jquery");
 var rawData = "..//assets/sdot2015.csv";
+
+var addCommas = function addCommas(nStr)
+{
+  nStr += '';
+  x = nStr.split('.');
+  x1 = x[0];
+  x2 = x.length > 1 ? '.' + x[1] : '';
+  var rgx = /(\d+)(\d{3})/;
+  while (rgx.test(x1)) {
+    x1 = x1.replace(rgx, '$1' + ',' + '$2');
+  }
+  return x1 + x2;
+}
+
+
 var CustomTooltip = function CustomTooltip(tooltipId, width){
 	var tooltipId = tooltipId;
 	$("body").append("<div class='tooltip' id='"+tooltipId+"'></div>");
