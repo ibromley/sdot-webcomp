@@ -13,7 +13,7 @@
   {
     "layer": "Bridge_struct",
     "head": "Bridges &amp; Structures",
-    "text": "The Bridges and Structures asset class consists of the transportation structures that are associated with the street network and a few one-of-a-kind roadway structures (talk about one of them here)",
+    "text": "The Bridges and Structures asset class consists of the transportation structures that are associated with the street network and a few one-of-a-kind roadway structures such as the three draw bridges along the Montalke Cut",
     "anchor": "bridges"
   },
   {
@@ -22,10 +22,22 @@
     "text": "You might know this as the Seattle Underground! Following the Great Seattle Fire of 1889, streets in the Pioneer Square area were raised during reconstruction, creating the Seattle Underground as we know it today."
   },
   {
+    "layer": "Bridge_struct",
+    "head": "Why Maintenance is Important",
+    "text": "Since a bridge can potentially have a very long useful life, effective management requires maintenance and replacement of major components of the bridge on a recurring cycle, rather than replacement of the entire structure"
+
+  },
+  {
     "layer": "Channelization",
     "head": "Channelization",
     "text": "The Channelization asset class consists of pavement markings, other than crosswalks, and delineator posts that define usage of the city streets and direct the flow of traffic. Painted lane line channelization is not long-lived and we generally do not consider it in the same category of infrastructure such as bridges, pavement or signals which last decades. Channelization markings generally require annual maintenance.",
     "anchor": "channelization"
+  },
+  {
+    "layer": "Channelization",
+    "head": "Why Maintenance is Important",
+    "text": "Lines and markings typically have a life-spane of 3 - 5 years before they need to be replaved. SDOT is currently experimenting with alternative lane markings such as green bike boxes and red bus lanes that will reduce the cost and frequency of maintenance."
+
   },
   {
     "layer": "ITS",
@@ -34,9 +46,21 @@
     "anchor": "its"
   },
   {
+    "layer": "ITS",
+    "head": "Why Maintenance is Important",
+    "text": "The ITS asset class includes assets with life-spans from 8 years to 50+, however since assets in this class are newer a good maintenance strategy can expand these life-spans and reduce maintenance/replacement costs."
+
+  },
+  {
     "layer": "Parking",
     "head": "Parking Payment Devices",
     "text": "Parking payment devices collect fees for parking on public property or in the Right-of-Way (ROW). The City of Seattle uses on-street payment devices to manage parking in highly utilized areas to create the turnover needed to support a vibrant city. The Parking Operations group in the Transit and Mobility Division manages parking payment devices."
+  },
+  {
+    "layer": "Parking",
+    "head": "Why Maintenance is Important",
+    "text": "Paid parking plays a vital role in ensuring popular areas such as downtown have parking avaliable. The city began replacing single spot meters in 2004, finishing in 2013. The next update to the Parking Payment infrastructure will come in 2022-2023."
+
   },
   {
     "layer": "Pavement",
@@ -51,6 +75,18 @@
     "anchor": "pavement"
   },
   {
+    "layer": "Pavement",
+    "head": "Why Maintenance is Important",
+    "text": "As a roadway becomes more degraded and in need of maintenance, the cost to the city of each car passing over that road increases dramatically. Factor in that evidence suggests that the increasing use of heavy vehicles on Seattle’s arterials is accelerating a decline in pavement quality on arterials, and it becomes clear that maintaining our roads can save a ton of money."
+
+  },
+  {
+    "layer": "Pavement",
+    "head": "What About My Street?",
+    "text": "Delayed repair on non-arterial pavement has similar impacts as arterial pavement although new 2014-2015 condition information on non-arterial pavement show that non-arterial pavement quality declines at a much slower rate than arterial pavement quality, most likely due to vastly less heavy vehicle traffic."
+
+  },
+  {
     "layer": "Real_Property",
     "head": "Real Property",
     "text": "SDOT owns buildings that support transportation services and buildings indirectly acquired through the ROW acquisition process for capital projects. When acquiring parcels for street and multi- purpose ROW usage, a parcel may have a building present, which is purchased as part of the transaction.",
@@ -59,7 +95,7 @@
   {
     "layer": "Real_Property",
     "head": "King Street Station",
-    "text": "Ask stakeholders about interesting properties SDOT owns."
+    "text": "One example of property SDOT is responsbile for is King Street Station, which served as the major transportation hub of the city in the early 20th century, and serves as a hub for Sound Transit trains today"
   },
   {
     "layer": "Signs",
@@ -73,15 +109,22 @@
     "text": "The department has maintained an inventory of signs since the 1920s when they were initially recorded in a system of card files"
   },
   {
+    "layer": "Signs",
+    "head": "Why Maintenance is Important",
+    "text": "Except for programmatic replacement, sign assemblies are not regularly inspected and are maintained on a customer request basis. If crews discover failing signs assemblies, the perform the work as required."
+
+  },
+  {
     "layer": "Safety_Devices",
     "head": "Traffic Safety Structures and Devices",
-    "text": "The Traffic Safety Structures & Devices asset class includes all of the SDOT assets whose primary purpose is to provide an acceptably safe transportation system. It includes:",
+    "text": "The Traffic Safety Structures & Devices asset class includes all of the SDOT assets whose primary purpose is to provide an acceptably safe transportation system. It includes: Chicanes, Guardrails, and Traffic Circles",
     "anchor": "safety"
   },
   {
     "layer": "Safety_Devices",
-    "head": "I'm struggling",
-    "text": "to find interesting things to say"
+    "head": "Why Maintenance is Important",
+    "text": "Besides increasing the safety of cars on our roadways, traffic circles increase safety for pedestrians and bicyclists in the neighborhoods where they are present."
+
   },
   {
     "layer": "Transit",
@@ -92,7 +135,7 @@
   {
     "layer": "Transit",
     "head": "Historic Transit Shelters",
-    "text": "SDOT maintains a number of Transit Shelters built before King County Metro took over Bus operations in 1973. Can we find a list of these or a link somewhere?"
+    "text": "SDOT maintains a number of Transit Shelters built before King County Metro took over Bus operations in 1973. You can learn more about preservation efforts here https://historicseattle.org/interurban-shelters-restoration/"
   },
   {
     "layer": "Urban_Forest",
