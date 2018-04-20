@@ -76,7 +76,7 @@
     "layer": "Safety_Devices",
     "head": "Traffic Safety Structures and Devices",
     "text": "The Traffic Safety Structures & Devices asset class includes all of the SDOT assets whose primary purpose is to provide an acceptably safe transportation system. It includes:",
-    "anchor": "saftey"
+    "anchor": "safety"
   },
   {
     "layer": "Safety_Devices",
