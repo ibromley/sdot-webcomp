@@ -8,7 +8,7 @@
 
 This project aims to provide a web companion to the SDOT status and condition report. Traditionally produced as a [paper document](http://www.seattle.gov/Documents/Departments/SDOT/About/SDOT2015SCReportFinal12-7-2015.pdf), the companion to the SDOT Status and Condition Report will be a public website, providing a subset of the information in the report, presented in a more accessible way. This companion will not only improve transparency by making the information in that report more accessible to Seattle residents, but also will augment the existing report by adding informative and interactive visuals. 
 
-Live demo: [http://http://sdot.capstone.ischool.uw.edu/](http://sdot.capstone.ischool.uw.edu/)
+Live demo: [https://ibromley.github.io/sdot-webcomp/](https://ibromley.github.io/sdot-webcomp/)
 
 Data Source: [https://docs.google.com/spreadsheets/d/1-aBL2tsKYet1vlc4ESGTYoNmt7wzVoDdmzv3PKZWjkU/](https://docs.google.com/spreadsheets/d/1-aBL2tsKYet1vlc4ESGTYoNmt7wzVoDdmzv3PKZWjkU/)
 
@@ -45,7 +45,11 @@ npm run build
 
 ## Deployment
 
-Comming Soon!
+Builds can be pushed to Github Pages by invoking the `gh-pages` grunt task:
+
+```
+$ grunt gh-pages
+```
 
 ## Built With
 * [Less](http://lesscss.org/) - CSS preprocesor
@@ -60,11 +64,11 @@ Comming Soon!
 * **Patrick Smith** - *Project Managment* [psmith94](https://github.com/psmith94)
 * **Ryker Schwartzenberger** - *Development* - [rykerls](https://github.com/rykerls)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/ibromley/sdot-webcomp/contributors) who participated in this project.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) file for details
+This project is licensed under the MIT License - see the [LICENSE.txt](./LICENSE.txt) file for details
 
 ## Acknowledgments
 
