@@ -1,11 +1,40 @@
-# ST3 Voter Guide
+# TransitSphere
 
 [![Build Status](https://travis-ci.org/ibromley/sdot-webcomp.svg?branch=master)](https://travis-ci.org/ibromley/sdot-webcomp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Build Setup
 
-This project utilizes the Grunt build tool. I've quickly added it as a script/dependency to streamline the npm run workflow.
+![TransitSphere Logo](src/assets/Channelization.svg)
 
+This project aims to provide a web companion to the SDOT status and condition report. Traditionally produced as a [paper document](http://www.seattle.gov/Documents/Departments/SDOT/About/SDOT2015SCReportFinal12-7-2015.pdf), the companion to the SDOT Status and Condition Report will be a public website, providing a subset of the information in the report, presented in a more accessible way. This companion will not only improve transparency by making the information in that report more accessible to Seattle residents, but also will augment the existing report by adding informative and interactive visuals. 
+
+Live demo: [http://http://sdot.capstone.ischool.uw.edu/](http://sdot.capstone.ischool.uw.edu/)
+
+Data Source: [https://docs.google.com/spreadsheets/d/1-aBL2tsKYet1vlc4ESGTYoNmt7wzVoDdmzv3PKZWjkU/](https://docs.google.com/spreadsheets/d/1-aBL2tsKYet1vlc4ESGTYoNmt7wzVoDdmzv3PKZWjkU/)
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+### Prerequisites
+
+Make sure you have installed all of the following prerequisites on your development machine:
+
+* Git - [Download & Install Git](https://git-scm.com/downloads). OSX and Linux machines typically have this already installed.
+* Node.js - [Download & Install Node.js](https://nodejs.org/en/download/) and the npm package manager.
+* Grunt - [Download & Install Grunt](https://gruntjs.com/) the javascript task runner. You can download and install it by simply using npm. 
+```
+npm install -g grunt-cli
+```
+
+### Installing
+
+The recommended way to get TransitSphere is to use `git` to directly clone the repository to your localmachine:
+
+```
+$ git clone https://github.com/ibromley/sdot-webcomp sdot-webcomp
+$ cd sdot-webcomp
+```
 ```
 # install dependencies
 npm install
@@ -14,104 +43,31 @@ npm install
 npm run build
 ```
 
-## Project Structure
+## Deployment
 
-```
-/data - contains json files for populating the visuals
-    sources.sheet.json
-    stages.sheet.json - Critcal JSON file for reading content into "stages" of scrolling
-    uses.sheet.json
-/src
-    /assets
-        /animation - contains assets specific to that awesome train animation
-        ...
-        various Seattle Times logo assets
-        ...
-        ST3.svg - critcal scalar vector graphics file for performing animation
-    /css
-        animation.less - critical for actually creating the layout of the scrolling session
-        bars.less - styles the bar charts following the scroll section
-        flexbox.less - abstraction to improve css positioning
-        map.less - another critical file for coding specific sections of the map
-        seed.less - main css file
-        values.less - variables for less preprocessor
-    /js
-        /lib
-            colors.js - ST colors
-            debounce.js - controls scrolling animation
-            qsa.js - not sure, seems like a weird jQuery fix to something
-        calculator.js - interactive logic for calculator
-        main.js
-    index.html
-/tasks - various Grunt tasks
-    ...
-    ...
-Gruntfile.js - "registers" all available tasks for the project
-package.json
-project.json
-README.md
-```
+Comming Soon!
 
-## Creating the SVG
+## Built With
+* [Less](http://lesscss.org/) - CSS preprocesor
+* [Lodash](https://lodash.com) - HTML templating
+* [NPM](https://www.npmjs.com/) - Dependency Management
+* [Grunt](https://gruntjs.com/) - Our task runner
 
-It seems like the SVG itself is fairly well structured, which is will make the `activated` CSS style functional when we want to dynamically change the stage as we scroll.
+## Authors
 
-Each "layer" has an id and the content of each of the sections is enclosed in opening `<g>` and `</g>` closing tags.
+* **Iain Bromley** - *Development* - [ibromley](https://github.com/ibromley)
+* **Linh Tran** - *UI/UX Design* - [ltran1118](https://github.com/ltran1118)
+* **Patrick Smith** - *Project Managment* [psmith94](https://github.com/psmith94)
+* **Ryker Schwartzenberger** - *Development* - [rykerls](https://github.com/rykerls)
 
-**`ST3.svg`**
-```
-...
-<g id="Redmond">
-    <polyline class="cls-19" points="12, 13, 14, ..."/>
-    <g>
-      <circle class="cls-3" cx="450" cy="275.43" r="3.98"/>
-      <path class="cls-4" d="M554.34,306.77a3.23" transform="translate(-104.33 -34.57)"/>
-    </g>
-    <text class="cls-7" transform="translate(467.83 288.9)">Southeast<tspan x="0" y="10">Redmond</tspan></text>
-    <text class="cls-7" transform="translate(453.83 258.4)">Downtown<tspan x="0" y="10">Redmond</tspan></text>
-</g>
-<g id="Ballard">
-    <polyline class="cls-19" points="15, 16, 17, ..."/>
-    <g>
-      <circle class="cls-3" cx="263.41" cy="397.33" r="3.98"/>
-      <path class="cls-4" d="M367.75,428.67a3.23,3.23,0," transform="translate(-104.33 -34.57)"/>
-    </g>
-    ...
-</g>
-...
-```
+See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-**`map.less`**
-```
-    ...
-    .layer {
-      float: right;
-      ...
-      background: white;
+## License
 
-      &[data-layer="_405_BRT"],
-      &[data-layer="_522_BRT"] {
-        border-left: @border-width dashed @transit-purple;
-      }
-  
-      &[data-layer="Ballard"],
-      &[data-layer="West_Seattle"],
-      &[data-layer="Everett"],
-      &[data-layer="Redmond"],
-      &[data-layer="Kirkland"],
-      &[data-layer="Issaquah"],
-      &[data-layer="South_Federal_Way"],
-      &[data-layer="Federal_Way"],
-      &[data-layer="Tacoma"] {
-        border-left: @border-width dashed @transit-orange;
-      }
-  
-      &[data-layer="DuPont"] {
-        border-left: @border-width dashed @transit-green;
-      }
-  
-  
-      &[data-layer="Sounder_South"] {
-        border-left: @border-width solid @transit-blue;
-      }
-```
+This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) file for details
+
+## Acknowledgments
+
+* Props to the [Asset & Performance Management](http://www.seattle.gov/transportation/about-sdot/asset-management) team at the Seattle Department of Transportation for allowing us to paricipate on this project
+* Thanks to the Seattle Times for the awesome [project template](https://github.com/seattletimes/newsapp-template)
+
