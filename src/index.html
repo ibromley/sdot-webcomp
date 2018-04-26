@@ -70,6 +70,12 @@
           <% } %>
         <h2><%= stage.head %></h2>
         <p><%= stage.text %></p>
+        <% if (typeof(stage.extra) !== "undefined") { %>
+        <h3><%= stage.extra %></h3>
+        <% } %>
+        <% if (typeof(stage.extext) !== "undefined") { %>
+        <p><%= stage.extext %></p>
+        <% } %>
       </div>
       <% }) %>
     </section>

@@ -2,24 +2,18 @@
   {
     "layer": "Bike_Ped",
     "head": "Bicycle and Pedestrian System",
-    "text": "The Bicycle and Pedestrian System asset class serves pedestrians and bicyclists and encourages walking and bicycling for transportation and recreation. It includes the following assets: Bicycle Racks, Kiosks, Marked Crosswalks, Sidewalks, Stairways, Street furnishings, and trails.",
-    "anchor": "bike_ped"
-  },
-  {
-    "layer": "Bike_Ped",
-    "head": "Accessible Seattle for Everyone",
-    "text": "SDOT’s Curb Ramp and Accessible Route Planner, located at http://seattle.gov/transportation/, is intended to help pedestrians plan routes using the location, condition, and slope of curb ramps and sidewalks. We update the map regularly with the best available information and add newly built or improved sidewalks and curb ramps. Upon completion of the sidewalk condition assessment project we will update the map with new information and continue to consistently improve the mapping tool."
+    "text": "The Bicycle and Pedestrian System asset class serves pedestrians and bicyclists and encourages walking and bicycling for transportation and recreation.",
+    "anchor": "bike_ped",
+    "extra": "Accessible Seattle For Everyone",
+    "extext": "SDOT’s Curb Ramp and Accessible Route Planner, located at http://seattle.gov/transportation/, is intended to help pedestrians plan routes using the location, condition, and slope of curb ramps and sidewalks."
   },
   {
     "layer": "Bridge_struct",
     "head": "Bridges &amp; Structures",
     "text": "The Bridges and Structures asset class consists of the transportation structures that are associated with the street network and a few one-of-a-kind roadway structures (talk about one of them here)",
-    "anchor": "bridges"
-  },
-  {
-    "layer": "Bridge_struct",
-    "head": "Area Street Walls",
-    "text": "You might know this as the Seattle Underground! Following the Great Seattle Fire of 1889, streets in the Pioneer Square area were raised during reconstruction, creating the Seattle Underground as we know it today."
+    "anchor": "bridges",
+    "extra": "Did you know?",
+    "extext": "You might know this as the Seattle Underground! Following the Great Seattle Fire of 1889, streets in the Pioneer Square area were raised during reconstruction, creating the Seattle Underground as we know it today."
   },
   {
     "layer": "Channelization",
