@@ -70,6 +70,12 @@
           <% } %>
         <h2><%= stage.head %></h2>
         <p><%= stage.text %></p>
+        <% if (typeof(stage.extra) !== "undefined") { %>
+        <h3><%= stage.extra %></h3>
+        <% } %>
+        <% if (typeof(stage.extext) !== "undefined") { %>
+        <p><%= stage.extext %></p>
+        <% } %>
       </div>
       <% }) %>
     </section>
@@ -81,11 +87,24 @@
 
     <section class="text-block funding-bars" id="funding">
       <div class="constrained">
-        <div id="vis"></div>
+        <div class="container">
+      
+          <div>
+            <div class="row">
+              <div class="chart col-lg-12">
+                <div id="chart">
+                  <div id="tooltip">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>    
       </div>
     </section>
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
     <script src="app.js" async></script>
 
   </body>
