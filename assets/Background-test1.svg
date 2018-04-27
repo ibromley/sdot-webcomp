@@ -16,7 +16,7 @@
             }
             
             .cls-3 {
-                fill: none;
+                fill: #35ade3;
                 stroke: #45ace0;
                 stroke-width: 2px;
             }
