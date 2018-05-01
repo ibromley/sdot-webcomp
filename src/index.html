@@ -65,15 +65,13 @@
       </div>
       <% json.stages.forEach(function(stage) { %>
       <div class="layer" data-layer="<%= stage.layer %>">
-          <% if (typeof(stage.anchor) !== "undefined") { %>
-            <div id="<%= stage.anchor %>" class="anchor"></div>
-          <% } %>
+        <div id="<%= stage.anchor %>" class="anchor"></div>
         <h2><%= stage.head %></h2>
         <p><%= stage.text %></p>
-        <% if (typeof(stage.extra) !== "undefined") { %>
+        <% if (stage.extra !== null) { %>
         <h3><%= stage.extra %></h3>
         <% } %>
-        <% if (typeof(stage.extext) !== "undefined") { %>
+        <% if (stage.extext !== null) { %>
         <p><%= stage.extext %></p>
         <% } %>
       </div>
