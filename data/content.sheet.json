@@ -1,0 +1,133 @@
+[
+  {
+    "layer": "Bike_Ped",
+    "head": "Bicycle and Pedestrian System",
+    "text": "The Bicycle and Pedestrian System asset class serves pedestrians and bicyclists and encourages walking and bicycling for transportation and recreation. It includes the following assets: Bicycle Racks, Kiosks, Marked Crosswalks, Sidewalks, Stairways, Street furnishings, and trails.",
+    "anchor": "bike_ped"
+  },
+  {
+    "layer": "Bike_Ped",
+    "head": "Accessible Seattle for Everyone",
+    "text": "SDOT’s Curb Ramp and Accessible Route Planner, located at http://seattle.gov/transportation/, is intended to help pedestrians plan routes using the location, condition, and slope of curb ramps and sidewalks. We update the map regularly with the best available information and add newly built or improved sidewalks and curb ramps. Upon completion of the sidewalk condition assessment project we will update the map with new information and continue to consistently improve the mapping tool."
+  },
+  {
+    "layer": "Bridge_struct",
+    "head": "Bridges &amp; Structures",
+    "text": "The Bridges and Structures asset class consists of the transportation structures that are associated with the street network and a few one-of-a-kind roadway structures (talk about one of them here)",
+    "anchor": "bridges"
+  },
+  {
+    "layer": "Bridge_struct",
+    "head": "Area Street Walls",
+    "text": "You might know this as the Seattle Underground! Following the Great Seattle Fire of 1889, streets in the Pioneer Square area were raised during reconstruction, creating the Seattle Underground as we know it today."
+  },
+  {
+    "layer": "Bridge_struct",
+    "head": "Why Maintenance is Important",
+    "text": "Since a bridge can potentially have a very long useful life, effective management requires maintenance and replacement of major components of the bridge on a recurring cycle, rather than replacement of the entire structure"
+  },
+  {
+    "layer": "Channelization",
+    "head": "Channelization",
+    "text": "The Channelization asset class consists of pavement markings, other than crosswalks, and delineator posts that define usage of the city streets and direct the flow of traffic. Painted lane line channelization is not long-lived and we generally do not consider it in the same category of infrastructure such as bridges, pavement or signals which last decades. Channelization markings generally require annual maintenance.",
+    "anchor": "channelization"
+  },
+  {
+    "layer": "Channelization",
+    "head": "Why Maintenance is Important",
+    "text": "Lines and markings typically have a life-spane of 3 - 5 years before they need to be replaved. SDOT is currently experimenting with alternative lane markings such as green bike boxes and red bus lanes that will reduce the cost and frequency of maintenance."
+  },
+  {
+    "layer": "ITS",
+    "head": "Intelligent Transportation System",
+    "text": "Intelligent Transportation System, or ITS, is a new asset class for the 2015 Status & Condition Report. It combines Intelligent Transportation Signs and Traffic Signal Assemblies in order to recognize the system as a network of interdependent data-driven assets. The ITS class includes all of the assets that are either electrically- or solar powered and comprise the system that regulates, controls, communicates and manages the flow of traffic.",
+    "anchor": "its"
+  },
+  {
+    "layer": "ITS",
+    "head": "Intelligent Transportation System",
+    "text": "The ITS asset class includes assets with life-spans from 8 years to 50+, however since assets in this class are newer a good maintenance strategy can expand these life-spans and reduce maintenance/replacement costs."
+  },
+  {
+    "layer": "Parking",
+    "head": "Parking Payment Devices",
+    "text": "Parking payment devices collect fees for parking on public property or in the Right-of-Way (ROW). The City of Seattle uses on-street payment devices to manage parking in highly utilized areas to create the turnover needed to support a vibrant city. The Parking Operations group in the Transit and Mobility Division manages parking payment devices.",
+    "anchor": "parking"
+  },
+  {
+    "layer": "Parking",
+    "head": "Why Maintenance is Important",
+    "text": "Paid parking plays a vital role in ensuring popular areas such as downtown have parking avaliable. The city began replacing single spot meters in 2004, finishing in 2013. The next update to the Parking Payment infrastructure will come in 2022-2023."
+  },
+  {
+    "layer": "Pavement",
+    "head": "Pavement",
+    "text": "The Pavement System asset class consists of the surface, base, sub-base, and subgrade of Seattle’s street network."
+  },
+  {
+    "layer": "Pavement",
+    "head": "Lane miles",
+    "text": "The total arterial and non-arterial pavement network in Seattle consists of 3,954 12-foot-wide lane miles. We base this figure on a comprehensive pavement management assessment conducted in 2013-2014.",
+    "anchor": "pavement"
+  },
+  {
+    "layer": "Real_Property",
+    "head": "Real Property",
+    "text": "SDOT owns buildings that support transportation services and buildings indirectly acquired through the ROW acquisition process for capital projects. When acquiring parcels for street and multi- purpose ROW usage, a parcel may have a building present, which is purchased as part of the transaction.",
+    "anchor": "property"
+  },
+  {
+    "layer": "Real_Property",
+    "head": "King Street Station",
+    "text": "One example of property SDOT is responsbile for is King Street Station, which served as the major transportation hub of the city in the early 20th century, and serves as a hub for Sound Transit trains today"
+  },
+  {
+    "layer": "Signs",
+    "head": "Signs",
+    "text": "A Sign Assembly is a static message board that conveys essential information to road users, pedestrians and bicyclists about how to negotiate city streets and trails.",
+    "anchor": "signs"
+  },
+  {
+    "layer": "Signs",
+    "head": "Did you know",
+    "text": "The department has maintained an inventory of signs since the 1920s when they were initially recorded in a system of card files"
+  },
+  {
+    "layer": "Signs",
+    "head": "Why Maintenance is Important",
+    "text": "Except for programmatic replacement, sign assemblies are not regularly inspected and are maintained on a customer request basis. If crews discover failing signs assemblies, the perform the work as required."
+  },
+  {
+    "layer": "Safety_Devices",
+    "head": "Traffic Safety Structures and Devices",
+    "text": "The Traffic Safety Structures & Devices asset class includes all of the SDOT assets whose primary purpose is to provide an acceptably safe transportation system. It includes: Chicanes, Guardrails, and Traffic Circles",
+    "anchor": "safety"
+  },
+  {
+    "layer": "Safety_Devices",
+    "head": "Why Maintenance is Important",
+    "text": "Besides increasing the safety of cars on our roadways, traffic circles increase safety for pedestrians and bicyclists in the neighborhoods where they are present."
+  },
+  {
+    "layer": "Transit",
+    "head": "Transit",
+    "text": "Transit is a new Asset Class for the 2015 Status & Condition Report. It combines assets from other classes that specifically support transit services within the City of Seattle including: Transit Island Platforms for Pedestrians and Cyclists waiting for the bus and the Seattle Streetcar System",
+    "anchor": "transit"
+  },
+  {
+    "layer": "Transit",
+    "head": "Historic Transit Shelters",
+    "text": "SDOT maintains a number of Transit Shelters built before King County Metro took over Bus operations in 1973. You can learn more about preservation efforts here https://historicseattle.org/interurban-shelters-restoration/"
+  },
+  {
+    "layer": "Urban_Forest",
+    "head": "Urban Forest",
+    "text": "The City defines the Urban Forest as publicly and privately owned and maintained vegetation that is growing within the designated street Right-of-Way (ROW) within the corporate limits of the City of Seattle. SDOT has jurisdiction over the entire Urban Forest that exists in the ROW, however the department only owns a small portion of this Urban Forest.",
+    "anchor": "forest"
+  },
+  {
+    "layer": "Urban_Forest",
+    "head": "Urban Forest at Work",
+    "text": "According to extensive industry research, street trees provide many benefits to the urban environment and are a critical part of the transportation system: From a transportation perspective, street trees serve as traffic calming devices along arterial corridors, and also serve as a buffer between pedestrian and vehicular traffic. A tree-lined street is more attractive to bicyclists and pedestrians and promotes these modes of transportation."
+  }
+]
