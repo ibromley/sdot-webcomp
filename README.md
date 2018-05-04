@@ -1,16 +1,20 @@
+<img align="left" width="200" src="src/assets/transitsphere_logo.png"> 
+
 # TransitSphere
+### _Civic Guide of Seattle Transportation Ecosystem_
 
 [![Build Status](https://travis-ci.org/ibromley/sdot-webcomp.svg?branch=master)](https://travis-ci.org/ibromley/sdot-webcomp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
-![TransitSphere Logo](src/assets/Channelization.svg)
+> As the fastest growing city in the nation, Seattle’s transportation system is under tremendous stress. Whether we walk, bike, or drive, we all share the same road. However, information about our transportation system is often hard to find and confusing to interested citizens. TransitSphere, built in partnership with Seattle Department of Transportation, serves as a civic guide to the assets SDOT manages. The experience this tool provides allows citizens to learn more about their transit infrastructure in a way that is both approachable and informative.
 
-This project aims to provide a web companion to the SDOT status and condition report. Traditionally produced as a [paper document](http://www.seattle.gov/Documents/Departments/SDOT/About/SDOT2015SCReportFinal12-7-2015.pdf), the companion to the SDOT Status and Condition Report will be a public website, providing a subset of the information in the report, presented in a more accessible way. This companion will not only improve transparency by making the information in that report more accessible to Seattle residents, but also will augment the existing report by adding informative and interactive visuals. 
 
 Live demo: [https://ibromley.github.io/sdot-webcomp/](https://ibromley.github.io/sdot-webcomp/)
 
 Data Source: [https://docs.google.com/spreadsheets/d/1-aBL2tsKYet1vlc4ESGTYoNmt7wzVoDdmzv3PKZWjkU/](https://docs.google.com/spreadsheets/d/1-aBL2tsKYet1vlc4ESGTYoNmt7wzVoDdmzv3PKZWjkU/)
+
+SDOT Status and Condition Report: [2015 Status & Condition Report](http://www.seattle.gov/Documents/Departments/SDOT/About/SDOT2015SCReportFinal12-7-2015.pdf)
 
 ## Getting Started
 
