@@ -60,8 +60,8 @@
     "head": "Signs",
     "text": "A Sign Assembly is a static message board that conveys essential information to road users, pedestrians and bicyclists about how to negotiate city streets and trails.",
     "anchor": "signs",
-    "extra": null,
-    "extext": null
+    "extra": "null",
+    "extext": "null"
   },
   {
     "layer": "Safety_Devices",
