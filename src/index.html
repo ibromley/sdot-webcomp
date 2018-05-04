@@ -8,8 +8,13 @@
     <a name="home"></a>
     <header class="intro">
       <div class="constrained">
-
-        <h1>TransitSphere</h1>
+        <div class="hdr-container">
+          <a href="/"><img class="logo" src="assets/transitsphere_logo.png" alt="TransitSphere logo" /></a>
+          <h1 class="hdr-logo">TransitSphere</h1><br />
+          <p class="hdr-logo">Your Civic Guide to Seattle's Transportation Ecosystem</p>
+        </div>
+        <br />
+        <%= t.include("assets/hdr_background.svg") %>
     </header>
 
     <section class="text-block project-head" id="projects">
@@ -17,7 +22,7 @@
         <h2>Roadmap</h2>
         <p>The demands on Seattle’s transportation system have grown dramatically in recent years. Meanwhile, the system is aging. SDOT must balance infrastructure expansion, preservation, and maintenance by aligning Asset Management practices with service delivery strategies. This must occur within the limits of available resources to ensure that we strategically manage the transportation system for years to come.</p></p>
       </div>
-      <div id="nav" class="constrained">
+      <div id="nav">
         <nav class="jump">
           <a href="#home">Home</a> |
           <div class="dropdown">
@@ -76,11 +81,6 @@
         <% } %>
       </div>
       <% }) %>
-    </section>
-
-    <section class="text-block other-features" id="more-information">
-      <div class="constrained">
-      </div>
     </section>
 
     <section class="text-block funding-bars" id="funding">
