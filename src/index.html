@@ -8,8 +8,13 @@
     <a name="home"></a>
     <header class="intro">
       <div class="constrained">
-
-        <h1>TransitSphere</h1>
+        <div class="hdr-container">
+          <a href="/"><img class="logo" src="assets/transitsphere_logo.png" alt="TransitSphere logo" /></a>
+          <h1 class="hdr-logo"><em>TransitSphere</em></h1><br />
+          <p class="hdr-logo">Your Civic Guide to Seattle's Transportation Ecosystem</p>
+        </div>
+        <br />
+        <%= t.include("assets/hdr_background.svg") %>
     </header>
 
     <section class="text-block project-head" id="projects">
@@ -17,7 +22,7 @@
         <h2>Roadmap</h2>
         <p>The demands on Seattle’s transportation system have grown dramatically in recent years. Meanwhile, the system is aging. SDOT must balance infrastructure expansion, preservation, and maintenance by aligning Asset Management practices with service delivery strategies. This must occur within the limits of available resources to ensure that we strategically manage the transportation system for years to come.</p></p>
       </div>
-      <div id="nav" class="constrained">
+      <div id="nav">
         <nav class="jump">
           <a href="#home">Home</a> |
           <div class="dropdown">
@@ -43,7 +48,7 @@
     
     <section class="scroll-content">
       <div class="backdrop">
-        <%= t.include("assets/sdot2.svg") %>
+        <%= t.include("assets/Background-test1.svg") %>
       </div>
       <div class="first layer" data-layer="Existing">
         <p>Asset Class Key</p>
@@ -65,24 +70,17 @@
       </div>
       <% json.stages.forEach(function(stage) { %>
       <div class="layer" data-layer="<%= stage.layer %>">
-          <% if (typeof(stage.anchor) !== "undefined") { %>
-            <div id="<%= stage.anchor %>" class="anchor"></div>
-          <% } %>
+        <div id="<%= stage.anchor %>" class="anchor"></div>
         <h2><%= stage.head %></h2>
         <p><%= stage.text %></p>
-        <% if (typeof(stage.extra) !== "undefined") { %>
+        <% if (stage.extra !== null) { %>
         <h3><%= stage.extra %></h3>
         <% } %>
-        <% if (typeof(stage.extext) !== "undefined") { %>
+        <% if (stage.extext !== null) { %>
         <p><%= stage.extext %></p>
         <% } %>
       </div>
       <% }) %>
-    </section>
-
-    <section class="text-block other-features" id="more-information">
-      <div class="constrained">
-      </div>
     </section>
 
     <section class="text-block funding-bars" id="funding">
@@ -90,6 +88,8 @@
         <div class="container">
       
           <div>
+            <h1>All SDOT Assets - Replacement value of ~$20 Billion(Replacement Value)</h1>
+            <p>"Replacement value" quantifies the cost of totally replacing a given asset</p>
             <div class="row">
               <div class="chart col-lg-12">
                 <div id="chart">

@@ -3,6 +3,7 @@
 @transit-orange: #db4e00;
 @transit-purple: #492F92;
 @transit-green: #007749;
+@logo-blue: #47BEED;
 
 @import "map";
 @import "bars";
@@ -17,10 +18,41 @@ ul {
   list-style-type: circle;
 }
 
+.logo {
+  height: 80px;
+  float: left;
+  margin-top: 16px;
+}
+
+.hdr-logo {
+  margin-top: 12px;
+  margin-bottom: 0;
+  display: inline-block;
+}
+
+h1 {
+  color: @logo-blue;
+}
+
+@media @mobile {
+  .hdr-container {
+    margin: auto;
+  }
+
+  .logo {
+    display: block;
+  }
+}
+
 .constrained {
   max-width: 800px;
   margin: auto;
   padding: 0 20px;
+  font-family: @df-sans;
+}
+
+.row-title {
+  font-size: 32px;
 }
 
 .container {
@@ -64,6 +96,9 @@ ul {
 .sticky {
   position: fixed;
   top: 0;
+  right: 1%;
+  box-shadow: 0 16px 16px fade(black, 10%);
+  z-index: 999;
 }
 
 .sticky + .scroll-content {
@@ -204,33 +239,6 @@ header.intro {
 
   ul {
     font-family: @df-sans;
-  }
-}
-
-.pros-cons {
-  h4 {
-    margin-top: 0;
-    text-transform: uppercase;
-    text-align: center;
-    font-family: @df-sans;
-  }
-
-  .versus {
-    display: flex;
-
-    .pro {
-      border-right: 1px solid @df-light-gray;
-      padding-right: 16px;
-
-      @media @mobile {
-        border-right: none;
-        padding-right: 0;
-      }
-    }
-
-    @media @mobile {
-      display: block;
-    }
   }
 }
 
