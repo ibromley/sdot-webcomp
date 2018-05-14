@@ -44,7 +44,7 @@ var sticky = navbar.offsetTop;
 
 var stickyNav = function() {
   if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
+    navbar.classList.add("sticky");
   } else {
     navbar.classList.remove("sticky");
   }
@@ -55,6 +55,10 @@ stickyNav();
 
 window.addEventListener("scroll", debounce(onScroll, 100));
 onScroll();
+
+/*
+    Funding bar chart code below. Can this be moved to it's own file?
+*/
 
 // Shareholder chart color palette:
 const colours = [

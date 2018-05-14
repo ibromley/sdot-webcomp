@@ -51,13 +51,13 @@
         <%= t.include("assets/Background-test1.svg") %>
       </div>
       <div class="first layer" data-layer="Existing">
-        <p>Asset Class Key</p>
+        <h3>Asset Class Key</h3>
         <ul class="key">
-          <li> <i class="existing station icon"></i> Bike and Pedestrian System
-          <li> <i class="existing station icon"></i> Bridges and Structures
-          <li> <i class="approved station icon"></i> Channelization
-          <li> <i class="new station icon"></i> Intelligent Transportation System
-          <li> <i class="bus station icon"></i> Parking
+          <li> <b class="icon">+</b> Bike and Pedestrian System
+          <li> <b class="icon">+</b> Bridges and Structures
+          <li> <b class="icon">+</b> Channelization
+          <li> <b class="icon">+</b> Intelligent Transportation System
+          <li> <b class="icon">+</b> Parking
           <li> <b class="icon">+</b> Bridges
           <li> <b class="icon">+</b> Pavement
           <li> <b class="icon">P</b> Real Property
@@ -73,10 +73,10 @@
         <div id="<%= stage.anchor %>" class="anchor"></div>
         <h2><%= stage.head %></h2>
         <p><%= stage.text %></p>
-        <% if (stage.extra !== null) { %>
+        <% if (stage.extra !== "null") { %>
         <h3><%= stage.extra %></h3>
         <% } %>
-        <% if (stage.extext !== null) { %>
+        <% if (stage.extext !== "null") { %>
         <p><%= stage.extext %></p>
         <% } %>
       </div>

@@ -34,64 +34,12 @@ h1 {
   color: @logo-blue;
 }
 
-@media @mobile {
-  .hdr-container {
-    margin: auto;
-  }
-
-  .logo {
-    display: block;
-  }
-}
-
 .constrained {
   max-width: 800px;
   margin: auto;
   padding: 0 20px;
   font-family: @df-sans;
 }
-
-.row-title {
-  font-size: 32px;
-}
-
-.container {
-  padding: 0.5rem;
-}
-
-.row rect {
-  cursor: pointer;
-  transition: all ease 0.1s; }
-
-#chart {
-  position: relative; }
-
-#tooltip {
-  position: absolute;
-  opacity: 0;
-  padding: 5px 10px;
-  color: #333;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  margin: -23px 0 0 -15px;
-  white-space: nowrap;
-  pointer-events: none;
-  width: auto;
-  transition: opacity ease 0.2s, transform ease 0.2s; }
-  #tooltip.visible {
-    opacity: 1;
-    transform: translateY(-10px); }
-  #tooltip:after {
-    content: '';
-    position: absolute;
-    left: 10px;
-    bottom: -8px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 8px 8px 0 8px;
-    border-color: rgba(255, 255, 255, 0.9) transparent transparent transparent; }
 
 .sticky {
   position: fixed;
@@ -169,30 +117,11 @@ header.intro {
     font-weight: normal;
   }
 
-  .credits, .date {
-    font-family: @df-sans;
-    color: @df-dark-gray;
-    font-size: 15px;
-  }
-
   .jump {
     font-family: @df-sans;
     text-transform: uppercase;
     text-align: center;
     padding: 20px 0;
-  }
-
-  .side-by-side {
-    .display-flex;
-
-    .calculator {
-      margin-left: 20px;
-      .flex(0 0 300px);
-    }
-
-    @media @mobile {
-      display: block;
-    }
   }
 }
 
@@ -205,8 +134,8 @@ header.intro {
     box-shadow: 0 16px 16px fade(black, 10%);
   }
 
-  &.other-features {
-    box-shadow: 0 -16px 16px fade(black, 10%);
+  &.funding-bars {
+    box-shadow: 0 -16px 16px fade(black, 10%)
   }
 
   h2 {
@@ -224,21 +153,6 @@ header.intro {
     &.blue {
       border-color: @transit-blue;
     }
-  }
-}
-
-.source {
-  font-family: @df-sans;
-  font-size: 14px;
-}
-
-.other-features {
-  b {
-    display: block;
-  }
-
-  ul {
-    font-family: @df-sans;
   }
 }
 
@@ -260,10 +174,8 @@ header.intro {
   -moz-border-radius:5px;
   border-radius: 5px;
   border: 2px solid #000;
-  /* background: #222222; */
   background: #fff;
   opacity: .9;
-  /* color: #eeeeee; */
   color: black;
   padding: 10px;
   width: 300px;
