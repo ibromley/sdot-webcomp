@@ -1,78 +1,50 @@
-.funding-bars {
-
-  h4 {
-    margin-bottom: 0;
+/*
+    Stylesheet for the funding bar-chart vizualization.
+*/
+  //media queries
+  @mobile: ~"(max-width: 480px)";
+  @tablet: ~"(max-width: 768px)";
+.row-title {
+  font-size: 32px;
+  @media @mobile {
+    font-size: 16px;
   }
-
-  .bar {
-    background: black;
-    height: 20px;
-  }
-
-  @index-0: desaturate(@transit-green, 50%);
-  @index-1: desaturate(@transit-blue, 30%);
-  @index-2: desaturate(@transit-yellow, 30%);
-  @index-3: desaturate(@transit-orange, 30%);
-  @index-4: desaturate(@transit-purple, 30%);
-  @index-5: @df-dark-gray;
-  @index-6: lighten(desaturate(@transit-green, 50%), 30%);
-  @index-7: lighten(desaturate(@transit-blue, 30%), 30%);
-  @index-8: lighten(desaturate(@transit-yellow, 30%), 30%);
-  @index-9: lighten(desaturate(@transit-orange, 30%), 30%);
-
-  .stripey(@index, @color, @deg: -60deg) {
-    .bar.index-@{index} {
-      background: @color;
-      background-image: repeating-linear-gradient(@deg,
-        transparent 0px, transparent 2px, white 2px, white 3px, transparent 3px);
-    }
-  }
-
-  .polka(@index, @color) {
-    .bar.index-@{index} {
-      background: @color;
-      background-image: radial-gradient(white 1px, transparent 2px),
-        radial-gradient(white 1px, transparent 2px);
-      background-position: 0 0, 5px 5px;
-      background-size: 10px 10px;
-    }
-  }
-
-  .stripey(0, @index-0);
-  .stripey(1, @index-1);
-  .stripey(2, @index-2);
-  .stripey(3, @index-3);
-  .stripey(4, @index-4);
-  .stripey(5, @index-5);
-  .stripey(6, @index-6, 60deg);
-  .stripey(7, @index-7, 60deg);
-  .stripey(8, @index-8, 60deg);
-  .stripey(9, @index-9, 60deg);
-
-
-  .stacked-bar {
-    overflow: hidden;
-
-    .bar {
-      float: left;
-    }
-  }
-
-  .breakout {
-    font-family: @df-sans;
-    font-size: 14px;
-
-    .item {
-      padding: 0 0 8px 0;
-    }
-
-    .bar {
-      height: 14px;
-    }
-
-    .money {
-      font-weight: bold;
-    }
-  }
-
 }
+
+.container {
+  padding: 0.5rem;
+}
+
+.row rect {
+  cursor: pointer;
+  transition: all ease 0.1s; }
+
+#chart {
+  position: relative; }
+
+#tooltip {
+  position: absolute;
+  opacity: 0;
+  padding: 5px 10px;
+  color: #333;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  margin: -23px 0 0 -15px;
+  white-space: nowrap;
+  pointer-events: none;
+  width: auto;
+  transition: opacity ease 0.2s, transform ease 0.2s; }
+  #tooltip.visible {
+    opacity: 1;
+    transform: translateY(-10px); }
+  #tooltip:after {
+    content: '';
+    position: absolute;
+    left: 10px;
+    bottom: -8px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 8px 0 8px;
+    border-color: rgba(255, 255, 255, 0.9) transparent transparent transparent; }

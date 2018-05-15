@@ -10,66 +10,21 @@
     }
   
     @size: 16px;
-  
-    b.icon {
-      font-size: 20px;
-      margin-right: 8px;
-      display: inline-block;
-      text-align: center;
-      width: @size;
-    }
-  
-    .station.icon {
-      width: @size;
-      height: @size;
-      display: inline-block;
-      border: 2px solid black;
-      border-radius: 100%;
-      vertical-align: middle;
-      text-align: center;
-      font-style: normal;
-      font-size: @size - 6px;
-      font-weight: bold;
-      margin-right: 8px;
-  
-      &.approved {
-        background: black;
-      }
-  
-      &.existing {
-        border-radius: 0;
-        height: @size / 2;
-        background: black;
-      }
-  
-      &.bus {
-        border-radius: 0;
-        transform: rotate(45deg);
-      }
-  
-      &.improved::before {
-        content: "+";
-      }
-  
-      &.parking::before {
-        content: "P";
-      }
-    }
   }
   
   .scroll-content {
-    max-width: 800px;
+    max-width: 1400px;
     margin: auto;
   
     .backdrop {
       position: fixed;
       top: 0;
-      left: 50%;
+      left: 25%;
       -webkit-transform: translate(-600px);
       transform: translateX(-600px);
-      width: 800px;
+      width: 90%;
       height: 100%;
-      z-index: -1;
+      z-index: -999;
   
       @media (max-width: 1100px) {
         left: 0;
@@ -99,29 +54,37 @@
           fill: @df-dark-gray;
         }
         path, polyline, polygon, line, circle {
-          stroke: @transit-blue;                    
+          opacity: 1;     
         }
-        // text, g text {
-        //   fill: @black;
-        // }
+        text, g text {
+          fill: black;
+        }
+        #Existing {
+          opacity: 1;
+        }
 
-        .cls-3 {
-          fill: @transit-blue;
-        }
-        path, polyline, polygon, line, circle, text {
-          transition: all .3s linear;
-        }
+        // path, polyline, polygon, line, circle, text {
+        //   transition: all .3s linear;
+        // }
         &.zoomed g[id]:not(.activated) {
-          path, polyline, polygon, line, circle {
-            stroke: @df-light-gray;                    
+          path, polyline, polygon, line, circle{
+            stroke: @df-light-gray;
+            opacity: 0.5;                 
           }
+
           text, g text {
             fill: @df-light-gray;
+            stroke: @df-light-gray;
+            opacity: 0.5;
           }
 
-          .cls-3 {
-            fill: @df-light-gray;
-          }
+          // rect {
+          //   fill: @df-light-gray;
+          // }
+
+          // .cls-3 {
+          //   fill: @df-light-gray;
+          // }
         }
       }
     }
@@ -138,7 +101,7 @@
       font-family: @df-sans;
       font-size: 16px;
       background: white;
-      z-index: 0;
+      z-index: -100;
   
       @media @mobile {
         width: auto;
@@ -156,7 +119,8 @@
   
       @border-width: 4px;
   
-      &[data-layer="_405_BRT"],
+
+      // These Can be re-used, so keeping for now.
       &[data-layer="_522_BRT"] {
         border-left: @border-width dashed @transit-purple;
       }
@@ -176,7 +140,6 @@
       &[data-layer="Channelization"] {
         border-left: @border-width dashed @transit-green;
       }
-  
   
       &[data-layer="Sounder_South"] {
         border-left: @border-width solid @transit-blue;

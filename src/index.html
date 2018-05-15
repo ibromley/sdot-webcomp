@@ -18,15 +18,11 @@
     </header>
 
     <section class="text-block project-head" id="projects">
-      <div class="constrained">
-        <h2>Roadmap</h2>
-        <p>The demands on Seattle’s transportation system have grown dramatically in recent years. Meanwhile, the system is aging. SDOT must balance infrastructure expansion, preservation, and maintenance by aligning Asset Management practices with service delivery strategies. This must occur within the limits of available resources to ensure that we strategically manage the transportation system for years to come.</p></p>
-      </div>
       <div id="nav">
         <nav class="jump">
-          <a href="#home">Home</a> |
+          <a href="#home" class="button">Home</a>
           <div class="dropdown">
-            <a class="dropbtn" href="#">Asset Classes &#9660;</a> |
+            <a class="dropbtn button" href="#">Assets &#9660;</a>
             <div class="dropdown-content">  
               <a href="#bike_ped">Bike &amp; Pedestrian</a>
               <a href="#bridges">Bridges &amp; Structures</a>
@@ -41,23 +37,27 @@
               <a href="#forest">Urban Forest</a>
             </div>
           </div>
-          <a href="#funding">Funding</a> 
+          <a href="#funding" class="button">Funding</a>
         </nav>
+      </div>
+      <div class="constrained">
+        <h2>Roadmap</h2>
+        <p>The demands on Seattle’s transportation system have grown dramatically in recent years. Meanwhile, the system is aging. SDOT must balance infrastructure expansion, preservation, and maintenance by aligning Asset Management practices with service delivery strategies. This must occur within the limits of available resources to ensure that we strategically manage the transportation system for years to come.</p></p>
       </div>
     </section>
     
     <section class="scroll-content">
       <div class="backdrop">
-        <%= t.include("assets/Background-test1.svg") %>
+        <%= t.include("assets/transit_sphere.svg") %>
       </div>
       <div class="first layer" data-layer="Existing">
-        <p>Asset Class Key</p>
+        <h3>Asset Class Key</h3>
         <ul class="key">
-          <li> <i class="existing station icon"></i> Bike and Pedestrian System
-          <li> <i class="existing station icon"></i> Bridges and Structures
-          <li> <i class="approved station icon"></i> Channelization
-          <li> <i class="new station icon"></i> Intelligent Transportation System
-          <li> <i class="bus station icon"></i> Parking
+          <li> <b class="icon">+</b> Bike and Pedestrian System
+          <li> <b class="icon">+</b> Bridges and Structures
+          <li> <b class="icon">+</b> Channelization
+          <li> <b class="icon">+</b> Intelligent Transportation System
+          <li> <b class="icon">+</b> Parking
           <li> <b class="icon">+</b> Bridges
           <li> <b class="icon">+</b> Pavement
           <li> <b class="icon">P</b> Real Property
@@ -73,10 +73,10 @@
         <div id="<%= stage.anchor %>" class="anchor"></div>
         <h2><%= stage.head %></h2>
         <p><%= stage.text %></p>
-        <% if (stage.extra !== null) { %>
+        <% if (stage.extra !== "null") { %>
         <h3><%= stage.extra %></h3>
         <% } %>
-        <% if (stage.extext !== null) { %>
+        <% if (stage.extext !== "null") { %>
         <p><%= stage.extext %></p>
         <% } %>
       </div>
@@ -103,9 +103,7 @@
       </div>
     </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
-    <script src="app.js" async></script>
 
+    <script src="app.js" async></script>
   </body>
 </html>
