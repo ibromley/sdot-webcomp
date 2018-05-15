@@ -1,9 +1,14 @@
 /*
     Stylesheet for the funding bar-chart vizualization.
 */
-
+  //media queries
+  @mobile: ~"(max-width: 480px)";
+  @tablet: ~"(max-width: 768px)";
 .row-title {
   font-size: 32px;
+  @media @mobile {
+    font-size: 16px;
+  }
 }
 
 .container {

@@ -189,7 +189,7 @@ var json = require('../../data/data.json');
     svg.append("text")
       .datum(d.level)
       .attr('class', 'row-title')  
-      .attr('transform', `translate(0,${ y(d.level + 1) * 3 - 10})`)
+      .attr('transform', `translate(0,${ y(d.level + 1) * 2 - 10})`)
       .text(titleText);
 
     let row = svg.append('g')
@@ -201,7 +201,7 @@ var json = require('../../data/data.json');
       .transition()
       .duration(777)
       .attr('opacity', 1)
-      .attr('transform', `translate(0,${ y(d.level + 1) * 3})`);
+      .attr('transform', `translate(0,${ y(d.level + 1) * 2})`);
 
     let rect = row.selectAll('rect')
       .data(d.children)
@@ -221,14 +221,14 @@ var json = require('../../data/data.json');
         if (dd.level == 2) {
           tooltip.classed('visible', true)
           .style({
-            top: `${y(d.level + 1) * 3}px`,
+            top: `${y(d.level + 1) * 2}px`,
             left: `${d.x(dd.x0) + d.x(dd.val) / 2}px`
           })
           .text(`${dd.name} : ${dd.val * 100}%`);
         } else {
           tooltip.classed('visible', true)
           .style({
-            top: `${y(d.level + 1) * 3}px`,
+            top: `${y(d.level + 1) * 2}px`,
             left: `${d.x(dd.x0) + d.x(dd.val) / 2}px`
           })
           .text(`${dd.name}: $${dd.val}(M) 
