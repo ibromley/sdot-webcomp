@@ -62,8 +62,8 @@ onScroll();
 
 // Shareholder chart color palette:
 const colours = [
-  ['#FF4B40', '#F5A623', '#7ED321', '#9013FE', '#50E3C2', '#F8E71C', '#4A90E2', '#0053FD', '#578C6D', '#FF5151', '#411C1C'], // Asset class level
-  ['#FF4B40', '#F5A623', '#7ED321', '#9013FE', '#50E3C2', '#F8E71C', '#4A90E2', '#0053FD', '#578C6D', '#FF5151', '#411C1C'], // Asset Level
+  ['#add8e6', '#a1c2dd', '#96acd4', '#8997cb', '#7c82c2', '#6f6db9', '#6059b0', '#5144a7', '#3f309e', '#2a1b94', '#00008b'], // Asset class level
+  ['#ffffe0', '#fff3b2', '#ffe589', '#f9d86d', '#f1cc54', '#e9c03f', '#dfb42f', '#d6a820', '#cc9d15', '#c2910d', '#b8860b'], // Asset Level
   ['#20BC36', '#F5A623', '#F52323', '#B6E9F3', '#717171'], // Condition level
   ['#F9C364', '#FACF83', '#FBDBA2', '#FCE7C1', '#FDF3E0'], // gold
   ['#6A77EA', '#8792EE', '#A5ADF2', '#C3C8F6', '#E1E3FA'], // purple

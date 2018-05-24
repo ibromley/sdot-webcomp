@@ -21,9 +21,9 @@
     <section class="text-block project-head" id="projects">
       <div id="nav">
         <nav class="jump">
-          <a href="#home" class="button">Home</a>
+          <a href="#home" class="btn" type="button">Home</a>
           <div class="dropdown">
-            <a class="dropbtn button" href="#">Assets &#9660;</a>
+            <a class="btn" href="#">Assets &#9660;</a>
             <div class="dropdown-content">  
               <a href="#bike_ped">Bike &amp; Pedestrian</a>
               <a href="#bridges">Bridges &amp; Structures</a>
@@ -38,7 +38,7 @@
               <a href="#forest">Urban Forest</a>
             </div>
           </div>
-          <a href="#funding" class="button">Funding</a>
+          <a href="#funding" class="btn">Funding</a>
         </nav>
       </div>
       <div class="constrained">
@@ -49,25 +49,9 @@
     
     <section class="scroll-content">
       <div class="backdrop">
-        <%= t.include("assets/transit_sphere.svg") %>
+        <%= t.include("assets/new_transit_sphere.svg") %>
       </div>
       <div class="first layer" data-layer="Existing">
-        <h3>Asset Class Key</h3>
-        <ul class="key">
-          <li> <b class="icon">+</b> Bike and Pedestrian System
-          <li> <b class="icon">+</b> Bridges and Structures
-          <li> <b class="icon">+</b> Channelization
-          <li> <b class="icon">+</b> Intelligent Transportation System
-          <li> <b class="icon">+</b> Parking
-          <li> <b class="icon">+</b> Bridges
-          <li> <b class="icon">+</b> Pavement
-          <li> <b class="icon">P</b> Real Property
-          <li> <b class="icon">+</b> Signs
-          <li> <b class="icon">+</b> Safety Devices
-          <li> <b class="icon">+</b> Transit
-          <li> <b class="icon">+</b> Urban Forest
-        </ul>
-
       </div>
       <% json.stages.forEach(function(stage) { %>
       <div class="layer" data-layer="<%= stage.layer %>">
@@ -89,8 +73,19 @@
         <div class="container">
       
           <div>
-            <h1>All SDOT Assets - Replacement value of ~$20 Billion(Replacement Value)</h1>
-            <p>"Replacement value" quantifies the cost of totally replacing a given asset</p>
+            <h1>The estimated replacement value of SDOT
+              infrastructure assets is approximately $20 billion</h1>
+            <p>“Replacement value” quantifies the total value of
+              Seattle’s transportation infrastructure. It represents
+              the cost in 2015 dollars to replace all of SDOT’s
+              assets, and does not imply that the entire
+              infrastructure requires replacement. Knowing an
+              asset’s replacement value helps direct decisionmaking
+              about investment strategies for repair or
+              replacement. Postponing asset maintenance could
+              result in earlier replacement rather than extending
+              an asset’s useful life if we perform preventative
+              maintenance.</p>
             <div class="row">
               <div class="chart col-lg-12">
                 <div id="chart">
@@ -104,7 +99,7 @@
       </div>
     </section>
 
-
+    <script type="text/javascript" src="js/materialize.min.js"></script>
     <script src="app.js" async></script>
   </body>
 </html>
