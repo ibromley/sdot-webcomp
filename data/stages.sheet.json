@@ -1,0 +1,90 @@
+[
+  {
+    "layer": "Bike_Ped",
+    "head": "Bicycle and Pedestrian System",
+    "text": "The Bicycle and Pedestrian System asset class serves pedestrians and bicyclists and encourages walking and bicycling for transportation and recreation.",
+    "anchor": "bike_ped",
+    "extra": "Accessible Seattle For Everyone",
+    "extext": "SDOT’s Curb Ramp and Accessible Route Planner, located at http://seattle.gov/transportation/, is intended to help pedestrians plan routes using the location, condition, and slope of curb ramps and sidewalks."
+  },
+  {
+    "layer": "Bridge_Struct",
+    "head": "Bridges &amp; Structures",
+    "text": "The Bridges and Structures asset class consists of the transportation structures that are associated with the street network and a few one-of-a-kind roadway structures (talk about one of them here)",
+    "anchor": "bridges",
+    "extra": "Did you know?",
+    "extext": "You might know this as the Seattle Underground! Following the Great Seattle Fire of 1889, streets in the Pioneer Square area were raised during reconstruction, creating the Seattle Underground as we know it today."
+  },
+  {
+    "layer": "Channelization",
+    "head": "Channelization",
+    "text": "The Channelization asset class consists of pavement markings, other than crosswalks, and delineator posts that define usage of the city streets and direct the flow of traffic.",
+    "anchor": "channelization",
+    "extra": "Why It's is Important",
+    "extext": "Lines and markings typically have a life-span of 3 - 5 years before they need to be repaved. SDOT is currently experimenting with alternative lane markings such as green bike boxes and red bus lanes that will reduce the cost and frequency of maintenance."
+  },
+  {
+    "layer": "ITS",
+    "head": "Intelligent Transportation System",
+    "text": "Intelligent Transportation System, or ITS, includes all of the assets that are either electrically- or solar powered and comprise the system that regulates, controls, communicates and manages the flow of traffic.",
+    "anchor": "its",
+    "extra": "Why It's is Important",
+    "extext": "The ITS asset class includes assets with life-spans from 8 years to 50+, however since assets in this class are newer a good maintenance strategy can expand these life-spans and reduce maintenance/replacement costs."
+  },
+  {
+    "layer": "Parking",
+    "head": "Parking Payment Devices",
+    "text": "Parking payment devices collect fees for parking on public property or in the Right-of-Way (ROW). The City of Seattle uses on-street payment devices to manage parking in highly utilized areas to create the turnover needed to support a vibrant city.",
+    "anchor": "parking",
+    "extra": "Why It's Important",
+    "extext": "Paid parking plays a vital role in ensuring popular areas such as downtown have parking avaliable."
+  },
+  {
+    "layer": "Pavement",
+    "head": "Pavement",
+    "text": "The Pavement System asset class consists of the surface, base, sub-base, and subgrade of Seattle’s street network.",
+    "anchor": "pavement",
+    "extra": "Why It's Important",
+    "extext": "As a roadway becomes more degraded and in need of maintenance, the cost to the city of each car passing over that road increases dramatically. Factor in that evidence suggests that the increasing use of heavy vehicles on Seattle’s arterials is accelerating a decline in pavement quality on arterials, and it becomes clear that maintaining our roads can save a ton of money."
+  },
+  {
+    "layer": "Real_Property",
+    "head": "Real Property",
+    "text": "SDOT owns buildings that support transportation services and buildings indirectly acquired through the ROW acquisition process for capital projects.",
+    "anchor": "property",
+    "extra": "King Street Station",
+    "extext": "One example of property SDOT is responsbile for is King Street Station, which served as the major transportation hub of the city in the early 20th century, and serves as a hub for Sound Transit trains today"
+  },
+  {
+    "layer": "Signs",
+    "head": "Signs",
+    "text": "A Sign Assembly is a static message board that conveys essential information to road users, pedestrians and bicyclists about how to negotiate city streets and trails.",
+    "anchor": "signs",
+    "extra": "null",
+    "extext": "null"
+  },
+  {
+    "layer": "Safety_Devices",
+    "head": "Traffic Safety Structures and Devices",
+    "text": "The Traffic Safety Structures & Devices asset class includes all of the SDOT assets whose primary purpose is to provide an acceptably safe transportation system. It includes: Chicanes, Guardrails, and Traffic Circles",
+    "anchor": "safety",
+    "extra": "Why It's Important",
+    "extext": "Besides increasing the safety of cars on our roadways, traffic circles increase safety for pedestrians and bicyclists in the neighborhoods where they are present."
+  },
+  {
+    "layer": "Transit",
+    "head": "Transit",
+    "text": "Transit is a new Asset Class for the 2015 Status & Condition Report. It combines assets from other classes that specifically support transit services within the City of Seattle including: Transit Island Platforms for Pedestrians and Cyclists waiting for the bus and the Seattle Streetcar System",
+    "anchor": "transit",
+    "extra": "Historic Transit Shelters",
+    "extext": "SDOT maintains a number of Transit Shelters built before King County Metro took over Bus operations in 1973. You can learn more about preservation efforts here https://historicseattle.org/interurban-shelters-restoration/"
+  },
+  {
+    "layer": "Urban_Forest",
+    "head": "Urban Forest",
+    "text": "The City defines the Urban Forest as publicly and privately owned and maintained vegetation that is growing within the designated street Right-of-Way (ROW) within the corporate limits of the City of Seattle. SDOT has jurisdiction over the entire Urban Forest that exists in the ROW, however the department only owns a small portion of this Urban Forest.",
+    "anchor": "forest",
+    "extra": "Urban Forest at Work",
+    "extext": "According to extensive industry research, street trees provide many benefits to the urban environment and are a critical part of the transportation system: From a transportation perspective, street trees serve as traffic calming devices along arterial corridors, and also serve as a buffer between pedestrian and vehicular traffic. A tree-lined street is more attractive to bicyclists and pedestrians and promotes these modes of transportation."
+  }
+]

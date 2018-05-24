@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <a name="home"></a>
+    <header class="intro">
+      <div class="constrained">
+        <div class="hdr-container">
+          <a href="/"><img class="logo" src="assets/transitsphere_logo.png" alt="TransitSphere logo" /></a>
+          <h1 class="hdr-logo"><em>TransitSphere</em></h1><br />
+          <p class="hdr-logo">Your Civic Guide to Seattle's Transportation Ecosystem</p>
+        </div>
+        <br />
+        <%= t.include("assets/hdr_background.svg") %>
+    </header>
+
+    <section class="text-block project-head" id="projects">
+      <div id="nav">
+        <nav class="jump">
+          <a href="#home" class="btn" type="button">Home</a>
+          <div class="dropdown">
+            <a class="btn" href="#">Assets &#9660;</a>
+            <div class="dropdown-content">  
+              <a href="#bike_ped">Bike &amp; Pedestrian</a>
+              <a href="#bridges">Bridges &amp; Structures</a>
+              <a href="#channelization">Channelization</a>
+              <a href="#its">Intelligent Transportation System</a>
+              <a href="#parking">Parking Payment Devices</a>
+              <a href="#pavement">Pavement</a>
+              <a href="#property">Real Property</a>
+              <a href="#signs">Signs</a>
+              <a href="#safety">Safety Devices</a>
+              <a href="#transit">Transit</a>
+              <a href="#forest">Urban Forest</a>
+            </div>
+          </div>
+          <a href="#funding" class="btn">Funding</a>
+        </nav>
+      </div>
+      <div class="constrained">
+        <h2>Roadmap</h2>
+        <p>The demands on Seattle’s transportation system have grown dramatically in recent years. Meanwhile, the system is aging. SDOT must balance infrastructure expansion, preservation, and maintenance by aligning Asset Management practices with service delivery strategies. This must occur within the limits of available resources to ensure that we strategically manage the transportation system for years to come.</p></p>
+      </div>
+    </section>
+    
+    <section class="scroll-content">
+      <div class="backdrop">
+        <%= t.include("assets/new_transit_sphere.svg") %>
+      </div>
+      <div class="first layer" data-layer="Existing">
+      </div>
+      <% json.stages.forEach(function(stage) { %>
+      <div class="layer" data-layer="<%= stage.layer %>">
+        <div id="<%= stage.anchor %>" class="anchor"></div>
+        <h2><%= stage.head %></h2>
+        <p><%= stage.text %></p>
+        <% if (stage.extra !== "null") { %>
+        <h3><%= stage.extra %></h3>
+        <% } %>
+        <% if (stage.extext !== "null") { %>
+        <p><%= stage.extext %></p>
+        <% } %>
+      </div>
+      <% }) %>
+    </section>
+
+    <section class="text-block funding-bars" id="funding">
+      <div class="constrained">
+        <div class="container">
+      
+          <div>
+            <h1>The estimated replacement value of SDOT
+              infrastructure assets is approximately $20 billion</h1>
+            <p>“Replacement value” quantifies the total value of
+              Seattle’s transportation infrastructure. It represents
+              the cost in 2015 dollars to replace all of SDOT’s
+              assets, and does not imply that the entire
+              infrastructure requires replacement. Knowing an
+              asset’s replacement value helps direct decisionmaking
+              about investment strategies for repair or
+              replacement. Postponing asset maintenance could
+              result in earlier replacement rather than extending
+              an asset’s useful life if we perform preventative
+              maintenance.</p>
+            <div class="row">
+              <div class="chart col-lg-12">
+                <div id="chart">
+                  <div id="tooltip">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>    
+      </div>
+    </section>
+
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="app.js" async></script>
+  </body>
+</html>
