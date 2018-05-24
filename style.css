@@ -46,17 +46,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  fill: #e0e0e0;
-}
-.scroll-content .backdrop svg text {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
-  fill: #424648;
 }
 .scroll-content .backdrop svg path,
 .scroll-content .backdrop svg polyline,
 .scroll-content .backdrop svg polygon,
 .scroll-content .backdrop svg line,
-.scroll-content .backdrop svg circle {
+.scroll-content .backdrop svg circle,
+.scroll-content .backdrop svg rect {
   opacity: 1;
 }
 .scroll-content .backdrop svg text,
@@ -66,19 +62,11 @@
 .scroll-content .backdrop svg #Existing {
   opacity: 1;
 }
-.scroll-content .backdrop svg.zoomed g[id]:not(.activated) path,
-.scroll-content .backdrop svg.zoomed g[id]:not(.activated) polyline,
-.scroll-content .backdrop svg.zoomed g[id]:not(.activated) polygon,
-.scroll-content .backdrop svg.zoomed g[id]:not(.activated) line,
-.scroll-content .backdrop svg.zoomed g[id]:not(.activated) circle {
-  stroke: #e0e0e0;
-  opacity: 0.5;
-}
-.scroll-content .backdrop svg.zoomed g[id]:not(.activated) text,
-.scroll-content .backdrop svg.zoomed g[id]:not(.activated) g text {
+.scroll-content .backdrop svg.zoomed g[id]:not(.activated) .cls-2,
+.scroll-content .backdrop svg.zoomed g[id]:not(.activated) .cls-11,
+.scroll-content .backdrop svg.zoomed g[id]:not(.activated) .cls-21 {
   fill: #e0e0e0;
   stroke: #e0e0e0;
-  opacity: 0.5;
 }
 .scroll-content .layer {
   float: right;
@@ -106,26 +94,6 @@
 }
 .scroll-content .layer h2 {
   margin: 0;
-}
-.scroll-content .layer[data-layer="_522_BRT"] {
-  border-left: 4px dashed #492F92;
-}
-.scroll-content .layer[data-layer="Bike_Ped"],
-.scroll-content .layer[data-layer="West_Seattle"],
-.scroll-content .layer[data-layer="Everett"],
-.scroll-content .layer[data-layer="Redmond"],
-.scroll-content .layer[data-layer="Kirkland"],
-.scroll-content .layer[data-layer="Issaquah"],
-.scroll-content .layer[data-layer="South_Federal_Way"],
-.scroll-content .layer[data-layer="Federal_Way"],
-.scroll-content .layer[data-layer="Tacoma"] {
-  border-left: 4px dashed #db4e00;
-}
-.scroll-content .layer[data-layer="Channelization"] {
-  border-left: 4px dashed #007749;
-}
-.scroll-content .layer[data-layer="Sounder_South"] {
-  border-left: 4px solid #69b3e7;
 }
 /*
     Stylesheet for the funding bar-chart vizualization.
@@ -226,6 +194,54 @@ h1 {
 .sticky + .scroll-content {
   padding-top: 60px;
 }
+.btn {
+  position: relative;
+  display: inline-block;
+  margin: 30px auto;
+  padding: 0;
+  width: 115px;
+  height: 25px;
+  overflow: hidden;
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  background-color: #00B0F0;
+  color: #ecf0f1;
+  transition: background-color 0.3s;
+}
+.btn:hover,
+.btn:focus {
+  background-color: #00B0F0;
+}
+.btn > * {
+  position: relative;
+}
+.btn span {
+  display: block;
+  padding: 12px 24px;
+}
+.btn:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 0;
+  padding-top: 0;
+  border-radius: 100%;
+  background-color: rgba(236, 240, 241, 0.3);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.btn:active:before {
+  width: 120%;
+  padding-top: 120%;
+  transition: width 0.2s ease-out, padding-top 0.2s ease-out;
+}
 .button {
   display: inline-block;
   width: 115px;
@@ -258,7 +274,7 @@ h1 {
   display: none;
   position: absolute;
   background-color: #f1f1f1;
-  width: 140px;
+  width: 115px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   font-size: 12px;
