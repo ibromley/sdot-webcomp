@@ -34,6 +34,10 @@ h1 {
   color: @logo-blue;
 }
 
+a {
+  text-decoration: none;
+}
+
 .constrained {
   max-width: 800px;
   margin: auto;
@@ -55,27 +59,27 @@ h1 {
 
 .btn {
   position: relative;
-
   display: inline-block;
-  margin: 30px auto;
-  padding: 0;
-  width: 115px;
-  height: 25px;
+  margin: 0 20px 30px 0;
+  padding: 10px;
+  text-align: center;
   overflow: hidden;
-
   border-width: 0;
-  outline: none;
-  border-radius: 2px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
-  
-  background-color: #00B0F0;
-  color: #ecf0f1;
-  
+  border: 3px solid #000;
+  border-radius: 1px;
+  background-color: rgb(255, 255, 255);
+  color: #00B0F0;
   transition: background-color .3s;
+  text-decoration: none;
+  font-weight: bold;
 }
+
 
 .btn:hover, .btn:focus {
   background-color: #00B0F0;
+  border: 3px solid #00B0F0;
+  color: white;
+  box-shadow: 1 2px 4px rgba(0, 0, 0, .6);
 }
 
 .btn > * {
@@ -139,7 +143,6 @@ h1 {
 
 #nav {
   font-family: @df-sans;
-  text-transform: uppercase;
   text-align: center;
   margin: auto;
 }
