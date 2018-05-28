@@ -60,7 +60,8 @@ onScroll();
     Funding bar chart code below. Can this be moved to it's own file?
 */
 
-// Shareholder chart color palette:
+// Hierarchical bar chart color palette:
+// Asset class and class level arrays need 11 hex color codes.
 const colours = [
   ['#add8e6', '#a1c2dd', '#96acd4', '#8997cb', '#7c82c2', '#6f6db9', '#6059b0', '#5144a7', '#3f309e', '#2a1b94', '#00008b'], // Asset class level
   ['#ffffe0', '#fff3b2', '#ffe589', '#f9d86d', '#f1cc54', '#e9c03f', '#dfb42f', '#d6a820', '#cc9d15', '#c2910d', '#b8860b'], // Asset Level
@@ -70,29 +71,35 @@ const colours = [
   ['#ED8EEE', '#F0A4F1', '#F4BBF4', '#F7D1F8', '#FBE8FB'] // mauve
 ];
 
+// Set levels in bar chart
 const maxLevels = 5;
+
+// Load replacement value /  status & condition data
 var rawData
 var json = require('../../data/data.json');
-  //console.log(json); // this will show the info it in firebug console
+
   var rawData = json;
 
-  //console.log(rawData)
+  // d3 DOM selectors
   const chart = d3.select('#chart');
   const tooltip = d3.select('#tooltip');
 
+  // set width and height for containing div
   const { width } = chart.node().getBoundingClientRect(),
     height = width / 2 ;
 
 
+  // Formats sourced json into heirarchical json that can be fed into chart
   const makeRowJson = (curLevel, itemCount, startIndex, dataArray) => {
     let dataRow2 = [],
       x0 = 0;
     dataArray = dataArray || rawData;
-    //console.log(dataArray);
     let jIndex = startIndex; 
+    
+    // Parse asset into item object
+    // the replacement of value of the asset or asset class determines scaling of bar chart
     for (let ii = 0; ii < itemCount; ii++) {
       let asset = dataArray[jIndex];
-      //console.log(asset);
       let val = asset['Replacement Value'];
       let item = {
         val,
@@ -103,6 +110,9 @@ var json = require('../../data/data.json');
         name: asset['Asset'],
         inventory: asset['Inventory']
       };
+
+      // Bounce if on the condition level, if asset class level recurse to next level,
+      // if asset level capture condition data and increment.
       if (curLevel != 2) {
         if (curLevel == 0) {
           item.children = makeRowJson(curLevel + 1, asset['Asset Number'], jIndex + 1);
@@ -133,6 +143,7 @@ var json = require('../../data/data.json');
         .domain([0, d3.max(item.children.map(d => d.x1))])
         .range([0, width]);
       }
+      // Incrementing depending on how many assets are in a given class
       if(curLevel == 0) {
         jIndex += asset['Asset Number'] + 1;
       } else {
@@ -143,28 +154,31 @@ var json = require('../../data/data.json');
     return dataRow2;
   };
 
+  // Parse data
   let data2 = makeRowJson(0, 11, 0);
 
-  //console.log(data2);
-
+  // Create x scale
   let x = d3.scale.linear()
     .domain([0, d3.max(data2.map(d => d.x1))])
     .range([0, width]);
 
+  // Create y scale
   const y = d3.scale.ordinal()
     .domain([0,1,2,3,4])
     .rangeRoundBands([0, height], 0.2);
 
+  // Create and append svg to the DOM
   let svg = chart.append('svg')
     .attr('width', width)
     .attr('height', height * 2);
 
-
+  // Function to render row
   const addRow = (d, x) => {
     if (!d.children) {
       return;
     }
 
+    // Title text depending on what level of data in row
     var titleText = "";
 
     if (d.level == 0) {
@@ -179,23 +193,27 @@ var json = require('../../data/data.json');
       .transition()
       .attr('opacity', 0)
       .remove();
-
+    
+    // Remove existing titles and text
     svg.selectAll('.row-title')
       .filter(dd => dd >= d.level)
       .transition()
       .attr('opacity', 0)
       .remove();
 
+    // Append row title text
     svg.append("text")
       .datum(d.level)
       .attr('class', 'row-title')  
       .attr('transform', `translate(0,${ y(d.level + 1) * 2 - 10})`)
       .text(titleText);
 
+    // Create and append row
     let row = svg.append('g')
       .datum(d.level)
       .attr('class', 'row');
 
+    // Transition animation attributes
     row.attr('opacity', 0)
       .attr('transform', `translate(0,${ y(d.level) || 0 })`)
       .transition()
@@ -203,6 +221,7 @@ var json = require('../../data/data.json');
       .attr('opacity', 1)
       .attr('transform', `translate(0,${ y(d.level + 1) * 2})`);
 
+    // Define attributes and action recievers for each rectangle in a chart row
     let rect = row.selectAll('rect')
       .data(d.children)
       .enter()
@@ -214,9 +233,12 @@ var json = require('../../data/data.json');
       .attr('height', y.rangeBand())
       .on('click', dd => addRow(dd, d.x))
       .on('mouseover', (dd) => {
+
+        // Highlight color
         if (d.level+2 < colours.length) {
           rect.filter(ddd => dd === ddd).attr('fill', colours[d.level+2][0]);
         }
+        // Tooltip size and text
         var toolText
         if (dd.level == 2) {
           tooltip.classed('visible', true)
@@ -240,7 +262,8 @@ var json = require('../../data/data.json');
         rect.attr('fill', dd => dd.color);
         tooltip.classed('visible', false);
       });
-
+    
+    // Set transition during render
     rect.transition()
       .duration(777)
       .attr('width',  dd => d.x(dd.val))
@@ -269,6 +292,7 @@ var json = require('../../data/data.json');
     
   };
 
+  // Create and append chart using parsed data
   addRow({
     children: data2,
     level: -1,
