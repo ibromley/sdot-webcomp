@@ -91,6 +91,7 @@
 .scroll-content .layer.first {
   margin-top: 200px;
   margin-top: 20vh;
+  opacity: 0;
 }
 .scroll-content .layer h2 {
   margin: 0;
