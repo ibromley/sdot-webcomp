@@ -76,7 +76,7 @@ const maxLevels = 5;
 
 // Load replacement value /  status & condition data
 var rawData
-var json = require('../../data/chart_data.json');
+var json = require('../../data/chart_data.sheet.json');
 
   var rawData = json;
 
