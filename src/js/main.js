@@ -57,7 +57,7 @@ window.addEventListener("scroll", debounce(onScroll, 100));
 onScroll();
 
 /*
-    Funding bar chart code below. Can this be moved to it's own file?
+    Funding bar chart code below. 
 */
 
 // Hierarchical bar chart color palette:
@@ -76,7 +76,7 @@ const maxLevels = 5;
 
 // Load replacement value /  status & condition data
 var rawData
-var json = require('../../data/data.json');
+var json = require('../../data/chart_data.json');
 
   var rawData = json;
 
