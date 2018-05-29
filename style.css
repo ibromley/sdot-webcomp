@@ -57,7 +57,7 @@
 }
 .scroll-content .backdrop svg text,
 .scroll-content .backdrop svg g text {
-  fill: black;
+  fill: lightblue;
 }
 .scroll-content .backdrop svg #Existing {
   opacity: 1;
@@ -67,6 +67,10 @@
 .scroll-content .backdrop svg.zoomed g[id]:not(.activated) .cls-21 {
   fill: #e0e0e0;
   stroke: #e0e0e0;
+}
+.scroll-content .backdrop svg.zoomed g[id]:not(.activated) .text,
+.scroll-content .backdrop svg.zoomed g[id]:not(.activated) g text {
+  fill: #e0e0e0;
 }
 .scroll-content .layer {
   float: right;
@@ -188,118 +192,7 @@ a {
   padding: 0 20px;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
 }
-.sticky {
-  position: fixed;
-  top: 1%;
-  left: 1%;
-  box-shadow: 0 16px 16px rgba(0, 0, 0, 0.1);
-  z-index: 999;
-}
-.sticky + .scroll-content {
-  padding-top: 60px;
-}
-.btn {
-  position: relative;
-  display: inline-block;
-  margin: 0 20px 30px 0;
-  padding: 10px;
-  text-align: center;
-  overflow: hidden;
-  border-width: 0;
-  border: 3px solid #000;
-  border-radius: 1px;
-  background-color: #ffffff;
-  color: #00B0F0;
-  transition: background-color 0.3s;
-  text-decoration: none;
-  font-weight: bold;
-}
-.btn:hover,
-.btn:focus {
-  background-color: #00B0F0;
-  border: 3px solid #00B0F0;
-  color: white;
-  box-shadow: 1 2px 4px rgba(0, 0, 0, 0.6);
-}
-.btn > * {
-  position: relative;
-}
-.btn span {
-  display: block;
-  padding: 12px 24px;
-}
-.btn:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: block;
-  width: 0;
-  padding-top: 0;
-  border-radius: 100%;
-  background-color: rgba(236, 240, 241, 0.3);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-.btn:active:before {
-  width: 120%;
-  padding-top: 120%;
-  transition: width 0.2s ease-out, padding-top 0.2s ease-out;
-}
-.button {
-  display: inline-block;
-  width: 115px;
-  height: 25px;
-  background: #4dc3e0;
-  margin: 4px;
-  padding: 10px;
-  text-align: center;
-  border-radius: 5px;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-}
-.anchor {
-  position: relative;
-  top: -120px;
-  visibility: hidden;
-}
-#nav {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
-  text-align: center;
-  margin: auto;
-}
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  width: 115px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  font-size: 12px;
-}
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-.dropdown:hover .dropbtn {
-  background-color: #69b3e7;
-}
+/* Styles for intro/header. */
 header.intro {
   background: white;
   padding: 20px 0;
@@ -336,15 +229,112 @@ header.intro .jump {
   border-top: 3px solid #69b3e7;
   padding-top: 8px;
 }
-.text-block h2.orange {
-  border-color: #db4e00;
+/* Styles for site navigation. */
+#nav {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  text-align: center;
+  margin: auto;
 }
-.text-block h2.purple {
-  border-color: #492F92;
+.sticky {
+  position: fixed;
+  top: 1%;
+  left: 1%;
+  box-shadow: 0 16px 16px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0);
 }
-.text-block h2.blue {
-  border-color: #69b3e7;
+.sticky + .scroll-content {
+  padding-top: 60px;
 }
+.anchor {
+  position: relative;
+  top: -120px;
+  visibility: hidden;
+}
+.btn {
+  position: relative;
+  display: inline-block;
+  margin: 0 20px 30px 0;
+  padding: 10px;
+  text-align: center;
+  overflow: hidden;
+  border-width: 0;
+  border: 3px solid #000;
+  border-radius: 1px;
+  background-color: #ffffff;
+  color: #00B0F0;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+#last {
+  margin-right: 0px;
+}
+.btn:hover,
+.btn:focus {
+  background-color: #00B0F0;
+  border: 3px solid #00B0F0;
+  color: white;
+  box-shadow: 1 2px 4px rgba(0, 0, 0, 0.6);
+}
+.btn > * {
+  position: relative;
+}
+.btn span {
+  display: block;
+  padding: 12px 24px;
+}
+.btn:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 0;
+  padding-top: 0;
+  border-radius: 100%;
+  background-color: rgba(236, 240, 241, 0.3);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.btn:active:before {
+  width: 120%;
+  padding-top: 120%;
+  transition: width 0.2s ease-out, padding-top 0.2s ease-out;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 115px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  font-size: 12px;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown:hover .dropbtn {
+  background-color: #69b3e7;
+}
+/* Styles for funding bar chart */
 #vis {
   width: 940px;
   height: 600px;
