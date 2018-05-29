@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
   
     grunt.loadNpmTasks('grunt-gh-pages');
-    grunt.initConfig({
+    grunt.config.merge({
         'gh-pages': {
             options: {
                 base: 'build'
