@@ -52,19 +52,19 @@
           opacity: 1;     
         }
         text, g text {
-          fill: black;
+          fill: lightblue;
         }
         #Existing {
           opacity: 1;
         }
-
-        // path, polyline, polygon, line, circle, text {
-        //   transition: all .3s linear;
-        // }
+        
         &.zoomed g[id]:not(.activated) {
           .cls-2, .cls-11, .cls-21 {  
               fill: @df-light-gray;
               stroke: @df-light-gray;
+          }
+          .text, g text {
+            fill: @df-light-gray;
           }
         }
       }

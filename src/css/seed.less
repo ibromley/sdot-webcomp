@@ -45,16 +45,76 @@ a {
   font-family: @df-sans;
 }
 
+/* Styles for intro/header. */
+header.intro {
+  background: white;
+  padding: 20px 0;
+
+  .splash {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  .jump {
+    font-family: @df-sans;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px 0;
+  }
+}
+
+.text-block {
+  clear: both;
+  background: white;
+  padding: 20px 0;
+
+  &.project-head {
+    box-shadow: 0 16px 16px fade(black, 10%);
+  }
+
+  &.funding-bars {
+    box-shadow: 0 -16px 16px fade(black, 10%)
+  }
+
+  h2 {
+    border-top: 3px solid @transit-blue;
+    padding-top: 8px;
+  }
+}
+
+/* Styles for site navigation. */
+#nav {
+  font-family: @df-sans;
+  text-align: center;
+  margin: auto;
+}
+
 .sticky {
   position: fixed;
   top: 1%;
   left: 1%;
   box-shadow: 0 16px 16px fade(black, 10%);
   z-index: 999;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .sticky + .scroll-content {
   padding-top: 60px;
+}
+
+.anchor {
+  position: relative;
+  top: -120px;
+  visibility: hidden;
 }
 
 .btn {
@@ -72,8 +132,12 @@ a {
   transition: background-color .3s;
   text-decoration: none;
   font-weight: bold;
+  margin-bottom: 0px;
 }
 
+#last {
+  margin-right: 0px;
+}
 
 .btn:hover, .btn:focus {
   background-color: #00B0F0;
@@ -120,33 +184,6 @@ a {
   transition: width .2s ease-out, padding-top .2s ease-out;
 }
 
-
-.button {
-  display: inline-block;
-  width: 115px;
-  height: 25px;
-  background: rgb(77, 195, 224);
-  margin: 4px;
-  padding: 10px;
-  text-align: center;
-  border-radius: 5px;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.anchor {
-  position: relative;
-  top: -120px;
-  visibility: hidden;
-}
-
-#nav {
-  font-family: @df-sans;
-  text-align: center;
-  margin: auto;
-}
-
 .dropdown {
   position: relative;
   display: inline-block;
@@ -179,63 +216,7 @@ a {
   background-color: @transit-blue;
 }
 
-header.intro {
-  background: white;
-  padding: 20px 0;
-
-  .splash {
-    width: 100%;
-  }
-
-  h1 {
-    font-size: 32px;
-    text-align: center;
-  }
-
-  h2 {
-    font-size: 20px;
-    font-weight: normal;
-  }
-
-  .jump {
-    font-family: @df-sans;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 20px 0;
-  }
-}
-
-.text-block {
-  clear: both;
-  background: white;
-  padding: 20px 0;
-
-  &.project-head {
-    box-shadow: 0 16px 16px fade(black, 10%);
-  }
-
-  &.funding-bars {
-    box-shadow: 0 -16px 16px fade(black, 10%)
-  }
-
-  h2 {
-    border-top: 3px solid @transit-blue;
-    padding-top: 8px;
-
-    &.orange {
-      border-color: @transit-orange;
-    }
-
-    &.purple {
-      border-color: @transit-purple;
-    }
-
-    &.blue {
-      border-color: @transit-blue;
-    }
-  }
-}
-
+/* Styles for funding bar chart */
 #vis {
   width: 940px;
   height: 600px;
