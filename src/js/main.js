@@ -5,7 +5,6 @@ var Camera = require("savage-camera");
 var savage = require("savage-query");
 var d3 = require("d3");
 var $ = require("jquery");
-var rawData = "..//assets/sdot2015.csv";
 
 var keyStage = document.querySelector(".scroll-content");
 var map = document.querySelector(".backdrop svg");
@@ -14,12 +13,22 @@ var stages = qsa(".layer").reverse();
 var current = null;
 var existing = document.querySelector("#Existing");
 
+/* 
+  Determines the 'stage' we should be on based on how far we've scrolled.
+  on the page. This determines which part of the svg will be 'zoomed'/'activated'.
+*/
 var onScroll = function() {
   var scrollBounds = keyStage.getBoundingClientRect();
   for (var i = 0; i < stages.length; i++) {
     var stage = stages[i];
     var bounds = stage.getBoundingClientRect();
     if (bounds.top < window.innerHeight && bounds.bottom > 0) {
+      
+      /* 
+          data-layer is set in the Google Sheet. It must match the 
+          id of a g element in the background svg that will be 
+          zoomed to when the stage is activated.
+      */
       var layerID = stage.getAttribute("data-layer");
       if (layerID == current) return;
       var layer = document.querySelector("#" + layerID);
@@ -29,16 +38,28 @@ var onScroll = function() {
       } else {
         savage(map).removeClass("zoomed");
       }
+
+      /* Remove currently active layer and replace it with the new one. */
       var active = document.querySelector(".activated");
       if (active) savage(active).removeClass("activated");
       savage(layer).addClass("activated");
       current = layerID;
+      
+      /* 
+          Zoom the background image to the g element with id layer
+          documentation: https://github.com/seattletimes/savage-camera
+      */
       camera.zoomTo(layer, window.innerWidth > 1000 ? 100 : 50, 700);
       return;
     }
   }
 }
 
+/* 
+  This bit of code is responsible for determining when to make the nav
+  bar 'sticky' (absolute position) based on how far we've scrolled in
+  the document.
+*/
 var navbar = document.getElementById("nav");
 var sticky = navbar.offsetTop;
 
@@ -53,6 +74,10 @@ var stickyNav = function() {
 window.addEventListener("scroll", stickyNav);
 stickyNav();
 
+/* 
+    onScroll listener for svg manipulation.
+    This needs to come after the listener for the nav bar.
+*/
 window.addEventListener("scroll", debounce(onScroll, 100));
 onScroll();
 
