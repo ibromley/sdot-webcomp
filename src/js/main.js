@@ -126,6 +126,9 @@ var json = require('../../data/chart_data.sheet.json');
     for (let ii = 0; ii < itemCount; ii++) {
       let asset = dataArray[jIndex];
       let val = asset['Replacement Value'];
+      if (typeof val === 'string' || val instanceof String) {
+        val = 0;  
+      }
       let item = {
         val,
         level: curLevel,
@@ -195,7 +198,7 @@ var json = require('../../data/chart_data.sheet.json');
   // Create and append svg to the DOM
   let svg = chart.append('svg')
     .attr('width', width)
-    .attr('height', height * 2);
+    .attr('height', height);
 
   // Function to render row
   const addRow = (d, x) => {
@@ -278,8 +281,7 @@ var json = require('../../data/chart_data.sheet.json');
             top: `${y(d.level + 1) * 2}px`,
             left: `${d.x(dd.x0) + d.x(dd.val) / 2}px`
           })
-          .text(`${dd.name}: $${dd.val}(M) 
-          \r Inventory: ${dd.inventory}`);
+          .text(`${dd.name}: $${dd.val}(M) \r Inventory: ${dd.inventory}`);
         } 
 
       })
@@ -288,32 +290,11 @@ var json = require('../../data/chart_data.sheet.json');
         tooltip.classed('visible', false);
       });
     
-    // Set transition during render
+    // Set rectangle width
     rect.transition()
       .duration(777)
       .attr('width',  dd => d.x(dd.val))
       .attr('x',  dd => d.x(dd.x0));
-
-    let legend = svg.append('g')
-      .data(d.children)
-      .attr('class', 'legend');
-    
-    legend.attr('transform', `translate(0,${ y(d.level) || 0 })`)
-      .transition()
-      .duration(777)
-      .attr('opacity', 1)
-      .attr('transform', `translate(0,${ y(d.level + 1) * 3})`);
-    
-    let box = legend.selectAll('box')
-      .data(d.children)
-      .enter()
-      .append('box')
-      .attr('fill', dd => dd.color)
-      .attr('x',  x(d.x0 || 0))
-      .attr('width',  '20')
-      .attr('y', '20')
-      .attr('height', '20');
-
     
   };
 
