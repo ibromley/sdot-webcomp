@@ -21646,7 +21646,7 @@ let x = d3.scale.linear().domain([0, d3.max(data2.map(d => d.x1))]).range([0, wi
 const y = d3.scale.ordinal().domain([0, 1, 2, 3, 4]).rangeRoundBands([0, height], 0.2);
 
 // Create and append svg to the DOM
-let svg = chart.append('svg').attr('width', width).attr('height', height * 2);
+let svg = chart.append('svg').attr('width', width).attr('height', height);
 
 // Function to render row
 const addRow = (d, x) => {
