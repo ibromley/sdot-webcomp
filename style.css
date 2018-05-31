@@ -134,14 +134,12 @@
   pointer-events: none;
   width: auto;
   transition: opacity ease 0.2s, transform ease 0.2s;
-  word-wrap: break-word;
-  width: 50px;
 }
-#tooltip #tooltip.visible {
+#tooltip.visible {
   opacity: 1;
   transform: translateY(-10px);
 }
-#tooltip #tooltip:after {
+#tooltip:after {
   content: '';
   position: absolute;
   left: 10px;
